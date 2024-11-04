@@ -1,14 +1,14 @@
 /*******************************************************************************
-  NVIC PLIB Header
+  UART1 PLIB
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_nvic.h
+    plib_uart1.h
 
   Summary:
-    NVIC PLIB Header File
+    UART1 PLIB Header File
 
   Description:
     None
@@ -38,11 +38,10 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-#ifndef PLIB_NVIC_H
-#define PLIB_NVIC_H
+#ifndef PLIB_UART1_H
+#define PLIB_UART1_H
 
-#include <stddef.h>
-#include <stdbool.h>
+#include "plib_uart_common.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -52,15 +51,36 @@
 #endif
 // DOM-IGNORE-END
 
+// *****************************************************************************
+// *****************************************************************************
+// Section: Interface
+// *****************************************************************************
+// *****************************************************************************
 
-/***************************** NVIC Inline *******************************/
+#define UART1_FrequencyGet()    (uint32_t)(150000000UL)
 
-void NVIC_Initialize( void );
-void NVIC_INT_Enable( void );
-bool NVIC_INT_Disable( void );
-void NVIC_INT_Restore( bool state );
-bool NVIC_INT_SourceDisable( IRQn_Type source );
-void NVIC_INT_SourceRestore( IRQn_Type source, bool status );
+/****************************** UART1 API *********************************/
+
+void UART1_Initialize( void );
+
+UART_ERROR UART1_ErrorGet( void );
+
+bool UART1_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq );
+
+bool UART1_Write( void *buffer, const size_t size );
+
+bool UART1_Read( void *buffer, const size_t size );
+
+int UART1_ReadByte( void );
+
+void UART1_WriteByte( int data );
+
+bool UART1_TransmitterIsReady( void );
+
+bool UART1_ReceiverIsReady( void );
+
+
+bool UART1_TransmitComplete( void );
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -68,5 +88,6 @@ void NVIC_INT_SourceRestore( IRQn_Type source, bool status );
     }
 
 #endif
+
 // DOM-IGNORE-END
-#endif // PLIB_NVIC_H
+#endif // PLIB_UART1_H
