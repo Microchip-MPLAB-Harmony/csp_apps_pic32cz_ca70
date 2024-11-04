@@ -57,11 +57,11 @@
 #define LED_OFF                     LED_Set
 #define LED_TOGGLE                  LED_Toggle
 
-#define USART1_TRANSMIT_CHANNEL     XDMAC_CHANNEL_0
-#define USART1_RECEIVE_CHANNEL      XDMAC_CHANNEL_1
+#define UART1_TRANSMIT_CHANNEL     XDMAC_CHANNEL_0
+#define UART1_RECEIVE_CHANNEL      XDMAC_CHANNEL_1
 
-#define USART1_TRANSMIT_ADDRESS     (&USART1_REGS->US_THR)
-#define USART1_RECEIVE_ADDRESS      (&USART1_REGS->US_RHR)
+#define UART1_TRANSMIT_ADDRESS     (&UART1_REGS->UART_THR)
+#define UART1_RECEIVE_ADDRESS      (&UART1_REGS->UART_RHR)
 
 #define WRITE_SIZE                  400
 #define READ_SIZE                   10
@@ -118,10 +118,10 @@ handle cache coherency ****\r\n**** Type a buffer of 10 characters and observe \
 it echo back ****\r\n**** LED toggles on each time buffer is echoed ****\r\n");
 
     /* Register callback functions for both write and read contexts */
-    XDMAC_ChannelCallbackRegister(USART1_TRANSMIT_CHANNEL, XDMAC_Callback, 0);
-    XDMAC_ChannelCallbackRegister(USART1_RECEIVE_CHANNEL, XDMAC_Callback, 1);
+    XDMAC_ChannelCallbackRegister(UART1_TRANSMIT_CHANNEL, XDMAC_Callback, 0);
+    XDMAC_ChannelCallbackRegister(UART1_RECEIVE_CHANNEL, XDMAC_Callback, 1);
 
-    XDMAC_ChannelTransfer(USART1_TRANSMIT_CHANNEL, writeBuffer, (const void *)USART1_TRANSMIT_ADDRESS, strlen(writeBuffer));
+    XDMAC_ChannelTransfer(UART1_TRANSMIT_CHANNEL, writeBuffer, (const void *)UART1_TRANSMIT_ADDRESS, strlen(writeBuffer));
 
     while ( true )
     {
@@ -130,7 +130,7 @@ it echo back ****\r\n**** LED toggles on each time buffer is echoed ****\r\n");
             /* Send error message to console.
              * Using USART directly to since DMA is in error condition */
             errorStatus = false;
-            USART1_Write(failureMessage, sizeof(failureMessage));
+            UART1_Write(failureMessage, sizeof(failureMessage));
         }
         else if(readStatus == true)
         {
@@ -141,14 +141,14 @@ it echo back ****\r\n**** LED toggles on each time buffer is echoed ****\r\n");
             echoBuffer[READ_SIZE] = '\r';
             echoBuffer[READ_SIZE+1] = '\n';
 
-            XDMAC_ChannelTransfer(USART1_TRANSMIT_CHANNEL, echoBuffer, (const void *)USART1_TRANSMIT_ADDRESS, (READ_SIZE+2));
+            XDMAC_ChannelTransfer(UART1_TRANSMIT_CHANNEL, echoBuffer, (const void *)UART1_TRANSMIT_ADDRESS, (READ_SIZE+2));
             LED_TOGGLE();
         }
         else if(writeStatus == true)
         {
             /* Submit buffer to read user data */
             writeStatus = false;
-            XDMAC_ChannelTransfer(USART1_RECEIVE_CHANNEL, (const void *)USART1_RECEIVE_ADDRESS, readBuffer, READ_SIZE);
+            XDMAC_ChannelTransfer(UART1_RECEIVE_CHANNEL, (const void *)UART1_RECEIVE_ADDRESS, readBuffer, READ_SIZE);
         }
         else
         {
