@@ -72,8 +72,8 @@ void PIO_Initialize ( void )
     /* PORTA Output Write Enable */
     ((pio_registers_t*)PIO_PORT_A)->PIO_OWER = PIO_OWER_Msk;
     /* PORTA Output Direction Enable */
-    ((pio_registers_t*)PIO_PORT_A)->PIO_OER = 0x20820U;
-    ((pio_registers_t*)PIO_PORT_A)->PIO_ODR = ~0x20820U;
+    ((pio_registers_t*)PIO_PORT_A)->PIO_OER = 0x20800U;
+    ((pio_registers_t*)PIO_PORT_A)->PIO_ODR = ~0x20800U;
     /* Initialize PORTA pin state */
     ((pio_registers_t*)PIO_PORT_A)->PIO_ODSR = 0x20800U;
     /* PORTA drive control */
@@ -123,10 +123,10 @@ void PIO_Initialize ( void )
     /* PORTD Output Write Enable */
     ((pio_registers_t*)PIO_PORT_D)->PIO_OWER = PIO_OWER_Msk;
     /* PORTD Output Direction Enable */
-    ((pio_registers_t*)PIO_PORT_D)->PIO_OER = 0x80000000U;
-    ((pio_registers_t*)PIO_PORT_D)->PIO_ODR = ~0x80000000U;
+    ((pio_registers_t*)PIO_PORT_D)->PIO_OER = 0x80800000U;
+    ((pio_registers_t*)PIO_PORT_D)->PIO_ODR = ~0x80800000U;
     /* Initialize PORTD pin state */
-    ((pio_registers_t*)PIO_PORT_D)->PIO_ODSR = 0x80000000U;
+    ((pio_registers_t*)PIO_PORT_D)->PIO_ODSR = 0x80800000U;
     /* PORTD drive control */
     ((pio_registers_t*)PIO_PORT_D)->PIO_DRIVER = 0x0U;
 
