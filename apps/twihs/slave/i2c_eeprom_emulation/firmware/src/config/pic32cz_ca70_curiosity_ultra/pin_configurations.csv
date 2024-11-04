@@ -45,7 +45,7 @@
 54,PC6,,Available,In,,,,,,,
 55,PD24,,Available,In,,,,,,,
 56,PA24,,Available,In,,,,,,,
-57,PD23,,Available,In,,,,,,,
+57,PD23,GPIO_PD23,GPIO,Out,Low,No,Disabled,No,No,Disabled,Low
 58,PC5,,Available,In,,,,,,,
 59,PA25,,Available,In,,,,,,,
 60,PD22,,Available,In,,,,,,,

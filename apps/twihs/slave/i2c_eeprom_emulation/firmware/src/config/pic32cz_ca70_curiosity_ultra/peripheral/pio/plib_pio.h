@@ -62,6 +62,15 @@
 // *****************************************************************************
 
 
+/*** Macros for GPIO_PD23 pin ***/
+#define GPIO_PD23_Set()               (PIOD_REGS->PIO_SODR = ((uint32_t)1U<<23U))
+#define GPIO_PD23_Clear()             (PIOD_REGS->PIO_CODR = ((uint32_t)1U<<23U))
+#define GPIO_PD23_Toggle()            (PIOD_REGS->PIO_ODSR ^= ((uint32_t)1U<<23U))
+#define GPIO_PD23_OutputEnable()      (PIOD_REGS->PIO_OER = ((uint32_t)1U<<23U))
+#define GPIO_PD23_InputEnable()       (PIOD_REGS->PIO_ODR = ((uint32_t)1U<<23U))
+#define GPIO_PD23_Get()               ((PIOD_REGS->PIO_PDSR >> 23U) & 0x1U)
+#define GPIO_PD23_PIN                  PIO_PIN_PD23
+
 
 // *****************************************************************************
 /* PIO Port
