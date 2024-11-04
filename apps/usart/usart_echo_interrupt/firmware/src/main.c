@@ -73,7 +73,7 @@ void APP_WriteCallback(uintptr_t context)
 
 void APP_ReadCallback(uintptr_t context)
 {
-    if(USART1_ErrorGet() != USART_ERROR_NONE)
+    if(UART1_ErrorGet() != UART_ERROR_NONE)
     {
         /* ErrorGet clears errors, set error flag to notify console */
         errorStatus = true;
@@ -97,9 +97,9 @@ int main ( void )
     LED_Off();
 
     /* Register callback functions and send start message */
-    USART1_WriteCallbackRegister(APP_WriteCallback, 0);
-    USART1_ReadCallbackRegister(APP_ReadCallback, 0);
-    USART1_Write(&messageStart, sizeof(messageStart));
+    UART1_WriteCallbackRegister(APP_WriteCallback, 0);
+    UART1_ReadCallbackRegister(APP_ReadCallback, 0);
+    UART1_Write(&messageStart, sizeof(messageStart));
 
     while ( true )
     {
@@ -107,7 +107,7 @@ int main ( void )
         {
             /* Send error message to console */
             errorStatus = false;
-            USART1_Write(&messageError, sizeof(messageError));
+            UART1_Write(&messageError, sizeof(messageError));
         }
         else if(readStatus == true)
         {
@@ -120,14 +120,14 @@ int main ( void )
             echoBuffer[RX_BUFFER_SIZE+2] = '\n';
             echoBuffer[RX_BUFFER_SIZE+3] = '\r';
 
-            USART1_Write(&echoBuffer, sizeof(echoBuffer));
+            UART1_Write(&echoBuffer, sizeof(echoBuffer));
             LED_Toggle();
         }
         else if(writeStatus == true)
         {
             /* Submit buffer to read user data */
             writeStatus = false;
-            USART1_Read(&receiveBuffer, sizeof(receiveBuffer));
+            UART1_Read(&receiveBuffer, sizeof(receiveBuffer));
         }
         else
         {
