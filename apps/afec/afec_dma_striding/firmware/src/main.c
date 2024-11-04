@@ -65,7 +65,7 @@
 /* Number of conversion samples per channel */
 #define NUM_CONVERSIONS_PER_CHANNEL (100U)
 
-#define AFEC_VREF               (3.3f)
+#define AFEC_VREF               (2.048f)
 
 #define AFEC_MAX_COUNT          (4095U)     
 

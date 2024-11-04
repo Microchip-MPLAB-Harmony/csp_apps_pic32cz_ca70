@@ -46,14 +46,16 @@ The following table shows the target hardware for the application projects.
 
 - Analog input (AD0) is fed from DAC output. Sine wave output is generated on the DAC output using 100 point lookup table.
   - Analog input "AD0" is mapped to Port Pin "PB1" that is routed to "Pin 14 of the EXT1 header"
-  - DAC output "DAC0" is mapped to Port Pin "PB13" that is routed to "Pin 5 of the J502 header"
-  - Use jumper wire to Connect "Pin 14 of the EXT1" to "Pin 5 of the J502"
+  - DAC output "DAC0" is mapped to Port Pin "PB13" that is routed to "Pin 8 of the EXT2 header"
+  - Use jumper wire to Connect "Pin 14 of the EXT1" to "Pin 8 of the EXT2"
 - Analog input (AD5) is connected to Vcc, or the user can supply input from an external source
-  - Analog input "AD5" is mapped to Port Pin "PC30" that is routed to "Pin 8 of the EXT1 header"
-  - Use a jumper wire to connect "Pin 8 of the EXT1 (AD5)" to Vcc or an external voltage source
+  - Analog input "AD5" is mapped to Port Pin "PC30" that is routed to "Pin 6 of J403 header"
+  - Use a jumper wire to connect "Pin 6 of J403" to Vcc or an external voltage source
 - Analog input (AD6) is connected to GND, or the user can supply input from an external source
-  - Analog input (AD6) is mapped to Port Pin "PC31" that is routed to "Pin 3 of the EXT1 header"
-  - Use a jumper wire to connect "Pin 3 of the EXT1" to GND or an external voltage source
+  - Analog input (AD6) is mapped to Port Pin "PC31" that is routed to "Pin 2 of J403 header"
+  - Use a jumper wire to connect "Pin 2 of J403" to GND or an external voltage source
+- Connect 3.3V from pin 4 of J401 to VREFIN pin on J302. This generates 2.048V reference voltage (VREFP) for the DAC.
+- Connect GND from pin 6 of J401 to GND pin on J302.
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
 ### Setting up [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)
@@ -81,5 +83,6 @@ The following table shows the target hardware for the application projects.
     - Flow Control : None
 3. Build and Program the project using its respective IDE
 4. Console displays 100 samples of the ADC count and the respective input voltages for all three channels
+5. Note that the VREFP for both DAC and AFEC modules is 2.048V. As a result, the DAC and AFEC output will saturate at 2.048V.
 
 ![output](images/output_afec_dma_striding.png)
