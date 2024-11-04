@@ -58,8 +58,8 @@
  AFEC_CH6 - PC31 - Connect to GND
  *****************************************************/
 
-#define AFEC_VREF               (3.3f)
-#define DAC_COUNT_INCREMENT     (124U)  // Equivalent to 0.1V 
+#define AFEC_VREF               (2.048f)
+#define DAC_COUNT_INCREMENT     (204U)  // Equivalent to 0.1V 
 #define DAC_COUNT_MAX           (4095U)
 
 
