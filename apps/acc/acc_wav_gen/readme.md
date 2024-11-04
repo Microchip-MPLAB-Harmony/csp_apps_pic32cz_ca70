@@ -42,7 +42,7 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
-- Comparator Positive Input: Connect an external voltage source to PD30 (Pin 3 of the J501)
+- Comparator Positive Input: Connect an external voltage source to PD30 (Pin 3 of EXT2 Connector)
 - Comparator Negative Input: Sine wave from the DAC Channel 0. No connection required
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
@@ -62,6 +62,6 @@ Refer to the table below for the PWM output pin of different boards:
 
 | Board      | PWM output pin                                    |
 | ----------------- | ---------------------------------------------- |
-| [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)    | PB03 (Pin 7 of the J502 Connector) |
+| [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)    | PC17 (Pin 10 of the EXT1  Connector) |
 | [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)      |PB03 (Pin 20 of the Camera Interface connector) |
 |||

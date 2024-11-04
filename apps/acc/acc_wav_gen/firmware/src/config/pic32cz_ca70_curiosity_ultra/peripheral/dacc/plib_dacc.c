@@ -53,7 +53,7 @@ void DACC_Initialize (void)
     /* Reset DACC Peripheral */
     DACC_REGS->DACC_CR = DACC_CR_SWRST_Msk;
 
-    DACC_REGS->DACC_MR = DACC_MR_PRESCALER(10U) ;
+    DACC_REGS->DACC_MR = DACC_MR_PRESCALER(13U) ;
 
     /* Configure DACC Bias Current */
     DACC_REGS->DACC_ACR = DACC_ACR_IBCTLCH0(3U);

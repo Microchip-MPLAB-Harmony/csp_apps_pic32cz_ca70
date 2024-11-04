@@ -23,7 +23,7 @@
 26,PB2,,Available,In,,,,,,,
 27,PE4,,Available,In,,,,,,,
 28,PE5,,Available,In,,,,,,,
-31,PB3,Compare_Pin,GPIO,Out,Low,No,Disabled,No,No,Disabled,Low
+31,PB3,,Available,In,,,,,,,
 32,PA21,,Available,In,,,,,,,
 34,PD30,,AFEC0_AD0,n/a,n/a,No,Disabled,No,No,Disabled,Low
 35,PA7,,Available,In,,,,,,,
@@ -83,7 +83,7 @@
 100,PC16,,Available,In,,,,,,,
 101,PD10,,Available,In,,,,,,,
 102,PA0,,Available,In,,,,,,,
-103,PC17,,Available,In,,,,,,,
+103,PC17,Compare_Pin,GPIO,Out,Low,No,Disabled,No,No,Disabled,Low
 105,PB4,,Available,In,,,,,,,
 106,PD15,,Available,In,,,,,,,
 108,PD29,,Available,In,,,,,,,
