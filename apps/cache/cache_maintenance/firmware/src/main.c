@@ -58,8 +58,8 @@
 #define READ_SIZE                        (10)
 #define MINIMUM_BUFFER_SIZE              (32)
 
-#define USART1_TRANSMIT_ADDRESS          (&USART1_REGS->US_THR)
-#define USART1_RECEIVE_ADDRESS           (&USART1_REGS->US_RHR)
+#define UART1_TRANSMIT_ADDRESS          (&UART1_REGS->UART_THR)
+#define UART1_RECEIVE_ADDRESS           (&UART1_REGS->UART_RHR)
 
 /* While using cache maintenance CMSIS API to handle cache coherency, buffer
  * size must be multiple of cache line (32 bytes) and buffers must be 32 byte
@@ -117,16 +117,16 @@ int main ( void )
      * request to XDMAC to load the latest data in the cache to the actual
      * memory */
     DCACHE_CLEAN_BY_ADDR((uint32_t *)writeBuffer, sizeof(writeBuffer));
-    XDMAC_ChannelTransfer(XDMAC_CHANNEL_0, writeBuffer, (const void *)USART1_TRANSMIT_ADDRESS, sizeof(writeBuffer));
+    XDMAC_ChannelTransfer(XDMAC_CHANNEL_0, writeBuffer, (const void *)UART1_TRANSMIT_ADDRESS, sizeof(writeBuffer));
 
     while ( true )
     {
         if(errorStatus == true)
         {
             /* Send error message to console.
-             * Using USART directly, since DMA is in error condition */
+             * Using UART directly, since DMA is in error condition */
             errorStatus = false;
-            USART1_Write(failureMessage, sizeof(failureMessage));
+            UART1_Write(failureMessage, sizeof(failureMessage));
         }
         else if(readStatus == true)
         {
@@ -138,7 +138,7 @@ int main ( void )
             echoBuffer[(READ_SIZE + 1)] = '\n';
 
             DCACHE_CLEAN_BY_ADDR((uint32_t *)echoBuffer, sizeof(echoBuffer));
-            XDMAC_ChannelTransfer(XDMAC_CHANNEL_0, echoBuffer, (const void *)USART1_TRANSMIT_ADDRESS, (READ_SIZE+2));
+            XDMAC_ChannelTransfer(XDMAC_CHANNEL_0, echoBuffer, (const void *)UART1_TRANSMIT_ADDRESS, (READ_SIZE+2));
             LED_Toggle();
         }
         else if(writeStatus == true)
@@ -149,7 +149,7 @@ int main ( void )
             /* Invalidate the cache lines before submitting the request */
             DCACHE_INVALIDATE_BY_ADDR((uint32_t *)readBuffer, sizeof(readBuffer));
             
-            XDMAC_ChannelTransfer(XDMAC_CHANNEL_1, (const void *)USART1_RECEIVE_ADDRESS, readBuffer, READ_SIZE);
+            XDMAC_ChannelTransfer(XDMAC_CHANNEL_1, (const void *)UART1_RECEIVE_ADDRESS, readBuffer, READ_SIZE);
         }
         else
         {
