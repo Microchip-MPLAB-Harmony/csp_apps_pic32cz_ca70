@@ -45,13 +45,13 @@
 54,PC6,,Available,In,,,,,,,
 55,PD24,,Available,In,,,,,,,
 56,PA24,,Available,In,,,,,,,
-57,PD23,,Available,In,,,,,,,
+57,PD23,LED,GPIO,Out,High,No,Disabled,No,No,Disabled,Low
 58,PC5,,Available,In,,,,,,,
 59,PA25,,Available,In,,,,,,,
 60,PD22,,Available,In,,,,,,,
 62,PA26,,Available,In,,,,,,,
 63,PD21,,Available,In,,,,,,,
-64,PA11,SWITCH,GPIO,In,n/a,No,Both Edge,Yes,No,Debounce Filter,Low
+64,PA11,,Available,In,,,,,,,
 65,PD20,,Available,In,,,,,,,
 66,PA10,,Available,In,,,,,,,
 67,PD19,,Available,In,,,,,,,
@@ -59,7 +59,7 @@
 69,PD18,,Available,In,,,,,,,
 70,PA27,,Available,In,,,,,,,
 71,PD28,,Available,In,,,,,,,
-73,PA5,LED,GPIO,Out,High,No,Disabled,No,No,Disabled,Low
+73,PA5,,Available,In,,,,,,,
 74,PD17,,Available,In,,,,,,,
 75,PA9,,Available,In,,,,,,,
 76,PC28,,Available,In,,,,,,,
@@ -79,7 +79,7 @@
 94,PC11,,Available,In,,,,,,,
 97,PC14,,Available,In,,,,,,,
 98,PD11,,Available,In,,,,,,,
-99,PA1,,Available,In,,,,,,,
+99,PA1,SWITCH,GPIO,In,n/a,No,Both Edge,Yes,No,Debounce Filter,Low
 100,PC16,,Available,In,,,,,,,
 101,PD10,,Available,In,,,,,,,
 102,PA0,,Available,In,,,,,,,
