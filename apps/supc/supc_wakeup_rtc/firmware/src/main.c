@@ -192,7 +192,7 @@ int main ( void )
                 configure_alarm();
                 SYSTICK_TimerStop();
                 printf("\n\rEntering SLEEP Mode");
-                while(USART1_TransmitComplete()==false)
+                while(UART1_TransmitComplete()==false)
                 LED_OFF();
                 SUPC_SleepModeEnter();
                 printf("\n\rRTC ALARM triggered waking up device from Sleep Mode");
@@ -206,7 +206,7 @@ int main ( void )
                 configure_alarm();
                 SYSTICK_TimerStop();
                 printf("\n\rEntering WAIT Mode");
-                while(USART1_TransmitComplete()==false)
+                while(UART1_TransmitComplete()==false)
                 LED_OFF();
                 SUPC_WaitModeEnter (PMC_FSMR_FLPM_FLASH_DEEP_POWERDOWN, WAITMODE_WKUP_RTC);
                 printf("\n\rRTC ALARM triggered waking up device from Wait Mode");
@@ -220,7 +220,7 @@ int main ( void )
                 configure_alarm();
                 SYSTICK_TimerStop();
                 printf("\n\rEntering Backup Mode");
-                while(USART1_TransmitComplete()==false)
+                while(UART1_TransmitComplete()==false)
                 LED_OFF();
                 SUPC_BackupModeEnter();
                 break;
