@@ -42,12 +42,10 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
-- Connect the DACC "Channel 0" and "Channel 1" to oscilloscope probe for observing the analog output waveform
-  - DACC Channel 0 is available through PB13 (Pin 5 of the J502 connector)
-  - DACC Channel 1 is available through PD00 (Pin 6 of J502 connector)
-- PD00 line is connected to the external oscillator on the board to act as Ethernet Clock and it needs to be disabled to observe the DACC Channel 1 output
-  - Short the Jumper (J805) located near the Ethernet PHY interface to Disable the Oscillator
-- Connect the Debug USB port on the board to the computer using a micro USB cable
+- Connect the DACC "Channel 0" to oscilloscope probe for observing the analog output waveform
+  - DACC Channel 0 is available through PB13 (Pin 8 of the EXT2 header)
+- Connect 3.3V from pin 4 of J401 to VREFIN pin on J302. This generates 2.048V reference voltage (VREFP) for the DAC.
+- Connect GND from pin 6 of J401 to GND pin on J302.
 
 ### Setting up [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)
 
@@ -64,6 +62,6 @@ The following table shows the target hardware for the application projects.
 
 | Board      | DACC output pins |
 | ----------------- | ---------------------------------------------- |
-| [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)    | PB13 (Pin 5 of J502 connector) <br> PD00 (Pin 6 of J502 connector) |
+| [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)    | PB13 (Pin 8 of the EXT2 header) |
 | [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)      | PB13 (Pin 5 of J504 connector) <br> PD00 (Pin 6 of J504 connector)|
 |||

@@ -102,17 +102,15 @@ uint16_t triangle_wave[NUM_OF_SAMPLES] = {
 
 void TC0_CallBack_Function (TC_TIMER_STATUS status, uintptr_t context)
 { 
-    if ((DACC_IsReady (0) == true) && (DACC_IsReady (1) == true))
+    if (DACC_IsReady (0) == true)
     {	
 		if (wave == SINE_WAVE)
 		{
             DACC_DataWrite (DACC_CHANNEL_0, sine_wave[sample_number]);
-            DACC_DataWrite (DACC_CHANNEL_1, sine_wave[sample_number]);
 		}
 		else
 		{
             DACC_DataWrite (DACC_CHANNEL_0, triangle_wave[sample_number]);
-            DACC_DataWrite (DACC_CHANNEL_1, triangle_wave[sample_number]);
 		}	
 
         sample_number++;

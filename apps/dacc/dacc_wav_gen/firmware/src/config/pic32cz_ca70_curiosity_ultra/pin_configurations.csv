@@ -1,5 +1,5 @@
 "Pin Number","Pin ID","Custom Name","Function","Direction","Latch","Open Drain","PIO Interrupt","Pull Up","Pull Down","Glitch/Debounce Filter",Drive Strength
-1,PD0,,DACC_DAC1,n/a,n/a,No,Disabled,No,No,Disabled,Low
+1,PD0,,Available,In,,,,,,,
 2,PD31,,Available,In,,,,,,,
 4,PE0,,Available,In,,,,,,,
 6,PE1,,Available,In,,,,,,,
@@ -51,7 +51,7 @@
 60,PD22,,Available,In,,,,,,,
 62,PA26,,Available,In,,,,,,,
 63,PD21,,Available,In,,,,,,,
-64,PA11,SWITCH,GPIO,In,n/a,No,Falling Edge,Yes,No,Debounce Filter,Low
+64,PA11,,Available,In,,,,,,,
 65,PD20,,Available,In,,,,,,,
 66,PA10,,Available,In,,,,,,,
 67,PD19,,Available,In,,,,,,,
@@ -79,7 +79,7 @@
 94,PC11,,Available,In,,,,,,,
 97,PC14,,Available,In,,,,,,,
 98,PD11,,Available,In,,,,,,,
-99,PA1,,Available,In,,,,,,,
+99,PA1,SWITCH,GPIO,In,n/a,No,Falling Edge,Yes,No,Debounce Filter,Low
 100,PC16,,Available,In,,,,,,,
 101,PD10,,Available,In,,,,,,,
 102,PA0,,Available,In,,,,,,,
