@@ -41,7 +41,7 @@
 49,PA15,,Available,In,,,,,,,
 51,PA14,,Available,In,,,,,,,
 52,PD25,,PWM0_PWML1,n/a,n/a,No,Disabled,No,No,Disabled,Low
-53,PD26,,PWM0_PWML2,n/a,n/a,No,Disabled,No,No,Disabled,Low
+53,PD26,,Available,In,,,,,,,
 54,PC6,,Available,In,,,,,,,
 55,PD24,,Available,In,,,,,,,
 56,PA24,,Available,In,,,,,,,
@@ -112,4 +112,4 @@
 133,PC25,,Available,In,,,,,,,
 141,PB8,,Available,In,,,,,,,
 142,PB9,,Available,In,,,,,,,
-144,PB13,,Available,In,,,,,,,
+144,PB13,,PWM0_PWML2,n/a,n/a,No,Disabled,No,No,Disabled,Low
