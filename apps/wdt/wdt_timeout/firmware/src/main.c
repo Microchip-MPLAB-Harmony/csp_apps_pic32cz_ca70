@@ -83,7 +83,7 @@ int main ( void )
         {
             if(SYSTICK_TimerPeriodHasExpired())
             {
-                LED_Toggle();
+                LED_GREEN_Toggle();
                 WDT_Clear();
             }
         }
