@@ -57,8 +57,8 @@
 
 #define READ_SIZE                        (10)
 
-#define USART1_TRANSMIT_ADDRESS          (&USART1_REGS->US_THR)
-#define USART1_RECEIVE_ADDRESS           (&USART1_REGS->US_RHR)
+#define UART1_TRANSMIT_ADDRESS          (&UART1_REGS->UART_THR)
+#define UART1_RECEIVE_ADDRESS           (&UART1_REGS->UART_RHR)
 
 /* Place the buffers in TCM (Tightly Coupled Memory), which is non-cacheable.
  * This demo configures DTCM for 0x8000(32kb) length in project properties.
@@ -113,7 +113,7 @@ int main ( void )
     XDMAC_ChannelCallbackRegister(XDMAC_CHANNEL_0, XDMAC_Callback, 0);
     XDMAC_ChannelCallbackRegister(XDMAC_CHANNEL_1, XDMAC_Callback, 1);
 
-    XDMAC_ChannelTransfer(XDMAC_CHANNEL_0, writeBuffer, (const void *)USART1_TRANSMIT_ADDRESS, sizeof(writeBuffer));
+    XDMAC_ChannelTransfer(XDMAC_CHANNEL_0, writeBuffer, (const void *)UART1_TRANSMIT_ADDRESS, sizeof(writeBuffer));
         
     while ( true )
     {
@@ -122,7 +122,7 @@ int main ( void )
             /* Send error message to console.
              * Using USART directly to since DMA is in error condition */
             errorStatus = false;
-            USART1_Write(failureMessage, sizeof(failureMessage));
+            UART1_Write(failureMessage, sizeof(failureMessage));
         }
         else if(readStatus == true)
         {
@@ -133,14 +133,14 @@ int main ( void )
             echoBuffer[READ_SIZE] = '\r';
             echoBuffer[(READ_SIZE+1)] = '\n';            
 
-            XDMAC_ChannelTransfer(XDMAC_CHANNEL_0, echoBuffer, (const void *)USART1_TRANSMIT_ADDRESS, (READ_SIZE + 2));
+            XDMAC_ChannelTransfer(XDMAC_CHANNEL_0, echoBuffer, (const void *)UART1_TRANSMIT_ADDRESS, (READ_SIZE + 2));
             LED_Toggle();
         }
         else if(writeStatus == true)
         {
             /* Submit buffer to read user data */
             writeStatus = false;
-            XDMAC_ChannelTransfer(XDMAC_CHANNEL_1, (const void *)USART1_RECEIVE_ADDRESS, readBuffer, READ_SIZE);
+            XDMAC_ChannelTransfer(XDMAC_CHANNEL_1, (const void *)UART1_RECEIVE_ADDRESS, readBuffer, READ_SIZE);
         }
         else
         {
