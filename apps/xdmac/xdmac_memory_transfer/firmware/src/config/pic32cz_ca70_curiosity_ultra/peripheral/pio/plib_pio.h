@@ -62,14 +62,14 @@
 // *****************************************************************************
 
 
-/*** Macros for LED pin ***/
-#define LED_Set()               (PIOA_REGS->PIO_SODR = (1<<5))
-#define LED_Clear()             (PIOA_REGS->PIO_CODR = (1<<5))
-#define LED_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<5))
-#define LED_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<5))
-#define LED_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<5))
-#define LED_Get()               ((PIOA_REGS->PIO_PDSR >> 5) & 0x1)
-#define LED_PIN                  PIO_PIN_PA5
+/*** Macros for LED_GREEN pin ***/
+#define LED_GREEN_Set()               (PIOD_REGS->PIO_SODR = ((uint32_t)1U<<23U))
+#define LED_GREEN_Clear()             (PIOD_REGS->PIO_CODR = ((uint32_t)1U<<23U))
+#define LED_GREEN_Toggle()            (PIOD_REGS->PIO_ODSR ^= ((uint32_t)1U<<23U))
+#define LED_GREEN_OutputEnable()      (PIOD_REGS->PIO_OER = ((uint32_t)1U<<23U))
+#define LED_GREEN_InputEnable()       (PIOD_REGS->PIO_ODR = ((uint32_t)1U<<23U))
+#define LED_GREEN_Get()               ((PIOD_REGS->PIO_PDSR >> 23U) & 0x1U)
+#define LED_GREEN_PIN                  PIO_PIN_PD23
 
 
 // *****************************************************************************
