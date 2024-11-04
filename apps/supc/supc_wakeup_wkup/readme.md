@@ -69,5 +69,5 @@ Following table lists the name of LED and switch used on the target board
 
 | Board | LED  | Switch |
 | ----- | --------- |----- |
-| [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)    |LED1 | SW0 |
+| [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)    |LED0 | SW0 |
 |||

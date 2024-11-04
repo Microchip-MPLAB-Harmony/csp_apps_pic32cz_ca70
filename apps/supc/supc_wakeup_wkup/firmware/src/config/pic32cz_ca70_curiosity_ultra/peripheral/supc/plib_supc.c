@@ -101,7 +101,7 @@ void SUPC_Initialize (void)
     SUPC_REGS->SUPC_WUMR = (SUPC_WUMR_LPDBC(0U)    \
                             | SUPC_WUMR_WKUPDBC(2U)   );
 
-    SUPC_REGS->SUPC_WUIR = SUPC_WUIR_WKUPEN7_ENABLE | SUPC_WUIR_WKUPT7_HIGH;
+    SUPC_REGS->SUPC_WUIR = SUPC_WUIR_WKUPEN1_ENABLE | SUPC_WUIR_WKUPT1_HIGH;
 }
 
 void SUPC_SleepModeEnter (void)
