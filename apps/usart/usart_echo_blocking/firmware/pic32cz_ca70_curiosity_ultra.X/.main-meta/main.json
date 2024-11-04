@@ -5,8 +5,8 @@
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.csp_apps_pic32cz_ca70_usart_echo_blocking",
 		"version": "3.4.0",
-		"displayName": "USART blocking Example for PIC32CZ CA70 Family",
-		"projectName": "usart_echo_blocking_pic32cz_ca70_curiosity_ultra",
+		"displayName": "UART blocking Example for PIC32CZ CA70 Family",
+		"projectName": "uart_echo_blocking_pic32cz_ca70_curiosity_ultra",
 		"shortDescription": "This example shows how to use the USART peripheral to transfer a block of data in a blocking manner.",
 		"ide": {
 			"name": "MPLABX",

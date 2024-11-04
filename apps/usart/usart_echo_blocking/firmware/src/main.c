@@ -77,22 +77,22 @@ int main ( void )
     LED_Off();
 
     /* Send start message */
-    USART1_Write(&messageStart, sizeof(messageStart));
+    UART1_Write(&messageStart, sizeof(messageStart));
 
     while ( true )
     {
         /* Check if there is a received character */
-        if(USART1_ReceiverIsReady() == true)
+        if(UART1_ReceiverIsReady() == true)
         {
-            if(USART1_ErrorGet() == USART_ERROR_NONE)
+            if(UART1_ErrorGet() == UART_ERROR_NONE)
             {
-                USART1_Read(&data, 1);
+                UART1_Read(&data, 1);
 
                 if((data == '\n') || (data == '\r'))
                 {
-                    USART1_Write(newline,sizeof(newline));
-                    USART1_Write(receiveBuffer,rxCounter);
-                    USART1_Write(newline,sizeof(newline));
+                    UART1_Write(newline,sizeof(newline));
+                    UART1_Write(receiveBuffer,rxCounter);
+                    UART1_Write(newline,sizeof(newline));
                     rxCounter = 0;
                     LED_Toggle();
                 }
@@ -103,7 +103,7 @@ int main ( void )
             }
             else
             {
-                USART1_Write(errorMessage,sizeof(errorMessage));
+                UART1_Write(errorMessage,sizeof(errorMessage));
             }
         }
     }
