@@ -26,12 +26,12 @@
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
-         <string>usart1</string>
+         <string>uart1</string>
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -42,16 +42,19 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;400&quot; canvasWidth=&quot;400&quot; dnOrder=&quot;0&quot;/&gt;
-    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;GraphSettings canvasHeight=&quot;176&quot; canvasWidth=&quot;777&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;PowerProfiles dnOrder=&quot;1&quot;&gt;
+      &lt;Profile dnOrder=&quot;0&quot; id=&quot;profile0&quot; name=&quot;Main&quot;/&gt;
+    &lt;/PowerProfiles&gt;
+    &lt;ComponentGraph dnOrder=&quot;2&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;cmsis&quot; x=&quot;340&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;core&quot; x=&quot;240&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;dfp&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;efc&quot; x=&quot;480&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;mcan1&quot; x=&quot;276&quot; y=&quot;241&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;stdio&quot; x=&quot;161&quot; y=&quot;240&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;usart1&quot; x=&quot;4&quot; y=&quot;226&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;mcan1&quot; x=&quot;302&quot; y=&quot;65&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;stdio&quot; x=&quot;164&quot; y=&quot;58&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;uart1&quot; x=&quot;19&quot; y=&quot;75&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
   &lt;/UserData&gt;
@@ -649,6 +652,39 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVIC_8_0_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_8_0_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVIC_8_0_HANDLER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_8_0_HANDLER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;UART1_Handler&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVIC_8_0_HANDLER_LOCK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_8_0_HANDLER_LOCK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PCK0_CLOCK_FREQUENCY"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PCK0_CLOCK_FREQUENCY&quot;&gt;
@@ -686,7 +722,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_105_FUNCTION_TYPE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;USART1_TXD1&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -697,7 +733,29 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_105_PERIPHERAL_FUNCTION&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;D&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_114_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_114_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;UART1_UTXD1&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_114_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_114_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;C&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -730,7 +788,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_32_FUNCTION_TYPE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;USART1_RXD1&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -741,7 +799,29 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_32_PERIPHERAL_FUNCTION&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;A&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_73_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_73_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;UART1_URXD1&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_73_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_73_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;C&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -785,7 +865,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOA_ABCDSR2_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;96&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -818,7 +898,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOA_PDR_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;2097152&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;96&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -829,7 +909,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOB_ABCDSR1_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;16&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -840,7 +920,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOB_ABCDSR2_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;16&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -873,7 +953,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOB_PDR_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;16&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -983,7 +1063,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIO_CCFG_SYSIO_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;3088&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;3072&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1033,7 +1113,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PMC_PCER0&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;220160&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;204032&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1370,12 +1450,65 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="UART1_CLOCK_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;UART1_CLOCK_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart1&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="UART1_INTERRUPT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;UART1_INTERRUPT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart1&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="UART1_INTERRUPT_ENABLE_UPDATE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;UART1_INTERRUPT_ENABLE_UPDATE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="UART1_INTERRUPT_HANDLER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;UART1_INTERRUPT_HANDLER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart1&quot; value=&quot;UART1_Handler&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="UART1_INTERRUPT_HANDLER_LOCK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;UART1_INTERRUPT_HANDLER_LOCK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart1&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="USART1_CLOCK_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;USART1_CLOCK_ENABLE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usart1&quot; value=&quot;true&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/core&gt;
 &lt;/core&gt;
 </value>
@@ -2157,10 +2290,10 @@
       &lt;DirectDependency dnOrder=&quot;0&quot; id=&quot;UART&quot;&gt;
         &lt;Attributes dnOrder=&quot;0&quot;&gt;
           &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
-            &lt;Value dnOrder=&quot;0&quot;&gt;usart1&lt;/Value&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;uart1&lt;/Value&gt;
           &lt;/String&gt;
           &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
-            &lt;Value dnOrder=&quot;0&quot;&gt;USART1_UART&lt;/Value&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;UART1_UART&lt;/Value&gt;
           &lt;/String&gt;
         &lt;/Attributes&gt;
       &lt;/DirectDependency&gt;
@@ -2178,25 +2311,18 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;stdio&gt;
   &lt;stdio dnOrder=&quot;0&quot; id=&quot;DEBUG_PERIPHERAL&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;stdio&quot; value=&quot;usart1&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;stdio&quot; value=&quot;uart1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/stdio&gt;
 &lt;/stdio&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usart1" name="!@#harmonyAttachmentState"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usart1&gt;
-  &lt;usart1 dnOrder=&quot;0&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot;&gt;
     &lt;Attachments dnOrder=&quot;0&quot;&gt;
-      &lt;DirectCapability dnOrder=&quot;0&quot; id=&quot;USART1_SPI&quot;&gt;
-        &lt;Attributes dnOrder=&quot;0&quot;&gt;
-          &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-            &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
-          &lt;/Boolean&gt;
-        &lt;/Attributes&gt;
-      &lt;/DirectCapability&gt;
-      &lt;DirectCapability dnOrder=&quot;1&quot; id=&quot;USART1_UART&quot;&gt;
+      &lt;DirectCapability dnOrder=&quot;0&quot; id=&quot;UART1_UART&quot;&gt;
         &lt;Attributes dnOrder=&quot;0&quot;&gt;
           &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
             &lt;Value dnOrder=&quot;0&quot;&gt;stdio&lt;/Value&gt;
@@ -2207,698 +2333,853 @@
         &lt;/Attributes&gt;
       &lt;/DirectCapability&gt;
     &lt;/Attachments&gt;
-  &lt;/usart1&gt;
-&lt;/usart1&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usart1" name="#&amp;__MCC_Group_Parrent_id"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>__ROOTVIEW</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usart1" name="BAUD_RATE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usart1&gt;
-  &lt;usart1 dnOrder=&quot;0&quot; id=&quot;BAUD_RATE&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="BAUD_RATE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;BAUD_RATE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="BRG_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;BRG_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="RECEIVE_DATA_REGISTER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;RECEIVE_DATA_REGISTER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="TRANSMIT_DATA_REGISTER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;TRANSMIT_DATA_REGISTER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="UART_CLK_SRC"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;UART_CLK_SRC&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="UART_CLOCK_FREQ"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;UART_CLOCK_FREQ&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="UART_INSTANCE_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;UART_INSTANCE_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="UART_INTERRUPT_MODE_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;UART_INTERRUPT_MODE_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;115200&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart1&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/usart1&gt;
-&lt;/usart1&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usart1" name="BRG_VALUE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usart1&gt;
-  &lt;usart1 dnOrder=&quot;0&quot; id=&quot;BRG_VALUE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usart1&quot; value=&quot;81&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/usart1&gt;
-&lt;/usart1&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="UART_MR_DATA_WIDTH"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;UART_MR_DATA_WIDTH&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usart1" name="USART_BAUD_WARNING"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usart1&gt;
-  &lt;usart1 dnOrder=&quot;0&quot; id=&quot;USART_BAUD_WARNING&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-  &lt;/usart1&gt;
-&lt;/usart1&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="UART_MR_FILTER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;UART_MR_FILTER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usart1" name="USART_CLOCK_FREQ"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usart1&gt;
-  &lt;usart1 dnOrder=&quot;0&quot; id=&quot;USART_CLOCK_FREQ&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usart1&quot; value=&quot;150000000&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/usart1&gt;
-&lt;/usart1&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="UART_MR_PAR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;UART_MR_PAR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usart1" name="USART_INTERRUPT_MODE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usart1&gt;
-  &lt;usart1 dnOrder=&quot;0&quot; id=&quot;USART_INTERRUPT_MODE&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;String dnOrder=&quot;0&quot; id=&quot;label&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;---&lt;/Value&gt;
-      &lt;/String&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;stdio&quot; value=&quot;false&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/usart1&gt;
-&lt;/usart1&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="UART_MR_STOP_BITS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;UART_MR_STOP_BITS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usart1" name="USART_INTERRUPT_MODE_ENABLE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usart1&gt;
-  &lt;usart1 dnOrder=&quot;0&quot; id=&quot;USART_INTERRUPT_MODE_ENABLE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usart1&quot; value=&quot;false&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/usart1&gt;
-&lt;/usart1&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usart1" name="USART_MODE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usart1&gt;
-  &lt;usart1 dnOrder=&quot;0&quot; id=&quot;USART_MODE&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="UART_OPERATING_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;UART_OPERATING_MODE&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usart1&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart1&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/usart1&gt;
-&lt;/usart1&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usart1" name="USART_OPERATING_MODE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usart1&gt;
-  &lt;usart1 dnOrder=&quot;0&quot; id=&quot;USART_OPERATING_MODE&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usart1&quot; value=&quot;0&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/usart1&gt;
-&lt;/usart1&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="UART_PERIPHERAL_DMA_SUPPORT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;UART_PERIPHERAL_DMA_SUPPORT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usart1" name="USART_RING_BUFFER_ENABLE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usart1&gt;
-  &lt;usart1 dnOrder=&quot;0&quot; id=&quot;USART_RING_BUFFER_ENABLE&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;String dnOrder=&quot;0&quot; id=&quot;label&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;---&lt;/Value&gt;
-      &lt;/String&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usart1&quot; value=&quot;false&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/usart1&gt;
-&lt;/usart1&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="UART_RING_BUFFER_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;UART_RING_BUFFER_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usart1" name="USART_RING_BUFFER_MODE_ENABLE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usart1&gt;
-  &lt;usart1 dnOrder=&quot;0&quot; id=&quot;USART_RING_BUFFER_MODE_ENABLE&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="UART_RING_BUFFER_MODE_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;UART_RING_BUFFER_MODE_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usart1&quot; value=&quot;false&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart1&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/usart1&gt;
-&lt;/usart1&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usart1" name="USART_SPI_BRG_VALUE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usart1&gt;
-  &lt;usart1 dnOrder=&quot;0&quot; id=&quot;USART_SPI_BRG_VALUE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usart1&quot; value=&quot;150&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/usart1&gt;
-&lt;/usart1&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="UART_RX_RING_BUFFER_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;UART_RX_RING_BUFFER_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="UART_TX_RING_BUFFER_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;UART_TX_RING_BUFFER_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="USART_DATA_8_BIT_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;USART_DATA_8_BIT_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="USART_DATA_BITS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;USART_DATA_BITS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="USART_FRAMING_ERROR_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;USART_FRAMING_ERROR_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="USART_INTERRUPT_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;USART_INTERRUPT_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="USART_OVERRUN_ERROR_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;USART_OVERRUN_ERROR_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="USART_PARITY_ERROR_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;USART_PARITY_ERROR_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="USART_PARITY_EVEN_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;USART_PARITY_EVEN_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="USART_PARITY_MARK_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;USART_PARITY_MARK_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="USART_PARITY_NONE_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;USART_PARITY_NONE_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="USART_PARITY_ODD_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;USART_PARITY_ODD_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="USART_PARITY_SPACE_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;USART_PARITY_SPACE_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="USART_PLIB_API_PREFIX"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;USART_PLIB_API_PREFIX&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart1" name="USART_STOP_1_BIT_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart1&gt;
+  &lt;uart1 dnOrder=&quot;0&quot; id=&quot;USART_STOP_1_BIT_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart1&gt;
+&lt;/uart1&gt;
 </value>
       </entry>
    </tokenMap>
-   <generatedFileHashHistoryMap class="java.util.HashMap">
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\usart2.h</file>
-         <hash>689e569630957717faa97f3f5871b54ed4c5d9541c76168cd21717ea887990fc</hash>
-      </entry>
+   <generatedFileHashHistoryMap class="java.util.TreeMap">
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\definitions.h</file>
-         <hash>e003f68b01fb59fe2374132d671701a404001ce19a0a51d9ebd1cd46db2e0af8</hash>
+         <hash>9f4d1e5c3bf3710a4da8871f86a16e3656283f28d5a6f469b740e35999c45a07</hash>
       </entry>
       <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\fuses.h</file>
-         <hash>c12fabd4eb80b2566458b5ca8125c04e639583da9fd38018aa845a483a228783</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cachel1_armv7.h</file>
-         <hash>6cdb5b324f2fd1bb5b2f47298ba6e6777e735d7cad3bb8d942cd36e2c6e65328</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_gcc.h</file>
-         <hash>3d4e265d0aa42f888385ccf073666e6ebb5ec9f834760b9da27c474e177f708d</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\spi0.h</file>
-         <hash>a436829048f84682c4067dc2ba7fa6d84cfcf20618c2e629652bb817c1eb9508</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\afec0.h</file>
-         <hash>8b122354f42ab98cfe5284c9fe8c4158666cd4e12d6469cd6f80c37bf27dab41</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\qspi.h</file>
-         <hash>2776cbc0b8b7322bc8fdd208b04cb5b47bbe1e5edac48f64978fdb7c10b2ba73</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\rtc.h</file>
-         <hash>b264804ca3dea7f51fae6941b218ca2ca987db07ea654b702c8570794235f8e2</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\utmi.h</file>
-         <hash>6855f1df9f18e437d6f9fd1faf5a757fbba701dfae33afa247c326dfcefbe9d0</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\piob.h</file>
-         <hash>49e23a567218766cb8dbe6f97cb37890359ea8d9ac24a1a877054bc053f7d189</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\efc.h</file>
-         <hash>ad96ab9befc5fd5ce5d7bdf55159f79f67d33870b8d687c9cb42a3e8629b083d</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\initialization.c</file>
-         <hash>ef2cad3d13fd55e4969324b5a0b438df47ec5f79dfb41ca98c1477dd09df21d9</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\pio\plib_pio.h</file>
-         <hash>87253708db08c9aa03fa1555403cb80629a091b4a1fdf94e3f7428d7bbecc00c</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\gmac.h</file>
-         <hash>e836e8f92856ef3a80585dcfdc13e0a9a856547484809e9f513f6f25ede5c96d</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\pio\pic32cz2051ca70144.h</file>
-         <hash>3228b179bdea17afa86a7b2c33228051824331884d10e0582f68ff86145850ef</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\pio.h</file>
-         <hash>e2a34f908eeb97024ca708bf426bef73f2ff4e23ad462dc843b9a31dbbb2adf9</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\pio\plib_pio.c</file>
-         <hash>694af6efae2083f51f9da2643961e2f85486e84fe4f4e068b9d2aadac11530b9</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\twihs1.h</file>
-         <hash>aca918d0be70a0f356d74404fff2a19ff2ab0834c77fbdb6072f1985ffda929e</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\isi.h</file>
-         <hash>f1ded52da1391a7a04670c694c65a651c9459867b354a59a1dac252f795d20a1</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\pwm0.h</file>
-         <hash>459306fc1d9409c699927e54905570f54f67f49f89dd7152d120090a6d6970ce</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\uart2.h</file>
-         <hash>d2036d4ba315a3e3bde118b3e602c3335adfea6a10f517125aec20d3f9173b64</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\libc_syscalls.c</file>
-         <hash>88bb2e34c939601b5b7ad076556e3ee0fcedf388436b8cddb6d6fd3e9d07472f</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\acc.h</file>
-         <hash>e8221a03d3a5a268cf2cf5d8e131543c4c923bab4d926963e65e4622955ece70</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\pin_configurations.csv</file>
-         <hash>f3db85875ba3214dea0b3bca276e8fde463206a67649cd47b051858be94cea44</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\afec.h</file>
-         <hash>0d6ffc8c64e71db74c4abc4f61e371eecd169be8aa100ae63d2ca8a8ba08504e</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\trng.h</file>
-         <hash>dd3083b7c3c5605fc8a51cab3e86374f743ba14668998d6c2c294371fee66c07</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\wdt.h</file>
-         <hash>5795d855dce095da1aed2ef62e1cf6c1ee5d565d916e0d6c9cb867f59d9bf091</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\mcan\plib_mcan_common.h</file>
-         <hash>696ed85219fc995e66be0ec5788145406623da28f7dda1e042a8f32d71110d5d</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\rstc.h</file>
-         <hash>dd97bc5f55d34bb059e4fdd6925b587e9f98c5c45faa3b98466a9542d26499a1</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\utmi.h</file>
-         <hash>3987007cb0df8590260d714010b489512185fe74bb79011c9df3c8c5de836ed7</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\tc3.h</file>
-         <hash>7cd3daaa6025ba4709f710e76800a8301beb1d9911040785695bb400d000fcd0</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\usbhs.h</file>
-         <hash>1a4117d52643846a7e21d2243ce211706754b96f0b4c3bd05f08ecd5f88371a6</hash>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\device.h</file>
+         <hash>c0a578fa22dcd6baaabc309ffe5a7eaf586b744a60b1e1a044ae08aa12ba33a6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\device_cache.h</file>
          <hash>90ab2a7320a2a8c1123fb5d297dfaa0f56e3cb28c3ad1ea2ab5633988c1ef252</hash>
       </entry>
       <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\gmac.h</file>
-         <hash>1ac45ebacf9854b2a68bf5e2f05ee76a4b204c8a07dc9527192b620a5faa71b8</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\ssc.h</file>
-         <hash>c20380d308db594908540e9316db7e1492e6142225a603e44e2090e1d5b55a99</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\pic32cz2051ca70144.h</file>
-         <hash>fa889bf8206b73742d06718fc7f0266cccf7c33b7020c41f48838b99f930fed8</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\usart\plib_usart1.h</file>
-         <hash>03e515cb708aab04398e2b45b7ef99508ae817314fbe1861f83a5da23dcbb0b1</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\spi1.h</file>
-         <hash>a1c71c6ae25c17a8759e9d909720b0a6b3e9de589451b79c35701265b65a48fb</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\wdt.h</file>
-         <hash>5f4d8383f522bd69fc21557fed273525498e54e0d0da7996d41120dfeb45e062</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\icm.h</file>
-         <hash>66a95f5c3554035b9cf51dc7464de454f18f0ce2c2b09c2977e56721670d9165</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\mcan0.h</file>
-         <hash>fb6e423182fe0a212f119b1ea019d1b3d792b059526c30d930999a4b0f4c97c1</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\i2sc1.h</file>
-         <hash>43a7bedafe8c112f74bf29109bd996db93c250913bbf4599c1c65ae333d47688</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv7.h</file>
-         <hash>de1b5eb9ed566527b66dc06f4ecb6a43ab6800f7dac47e87c9cb42984dca41bb</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\pioc.h</file>
-         <hash>8b3a0056ba9ca181ef3639a3ba96c46edc778cd5c22cd099d6fee6b30653385a</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h</file>
-         <hash>d074534d7106cec83474b3b0a897bd2553e1a8895ecbd54f4f4fb25928066eee</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\usart\plib_usart1.c</file>
-         <hash>dc710aeca05a02fa86803442170bba967315a1bd572454214f6b41302253d1cf</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\afec1.h</file>
-         <hash>1bce34e357aac4b775b4358000cac0a93358e4c79e1b7e4fcac42a884756d9b9</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\rtt.h</file>
-         <hash>1e9fdd0b7b17eb7d3baa42124f48423333602546e1344dd0eb48e0bd560dc8ee</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang.h</file>
-         <hash>11b39b96ddc1125124762b3423a77b90dd40ea5b4582a3513830245046b24311</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\twihs.h</file>
-         <hash>38ee6f111198718409cc30199359753045854bcd9c053f3810fb36f69b9046ca</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</file>
-         <hash>869640702d811c4c63abb52206715c891a93fd03be954df5ad40d378355af3d6</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\twihs2.h</file>
-         <hash>31a160006a06425ecbac0785335fc588ee1d46e27a15d347d837f35ecabf8687</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\uart1.h</file>
-         <hash>771c27f43b9e7af032e0eb2f4b9bd82fa5c1ba2d92d17e976140e0dd3666603b</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\gpbr.h</file>
-         <hash>9df095de730ec52cc511131c8b1fe364c7422669bfd513f85143c604e2672879</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\hsmci.h</file>
-         <hash>a2c30964277e758f9d83f1d9cba891844610526f198341cef24a1c2b951c082f</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\xdmac.h</file>
-         <hash>93142f2181a594df4aee0cb8d5f196199d957956efedf42aebdb1780a0b54ef3</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\qspi.h</file>
-         <hash>64694f05140390311c485df6a956c6505420d7ff105e39271cca6ee85ed7e0e1</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\rtt.h</file>
-         <hash>bc3446644f1cb7d7efcf4cb3f2d05c42e159a95600529d4e8b334b8d60d27be1</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\i2sc.h</file>
-         <hash>9beb8686da7ce33b96157d4851e6f287c4484ce7bacfb0e0b39cb9d1f9a42141</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\tc2.h</file>
-         <hash>c529bc92bbd2dd4a8095a46e1cfe5481d2145bb875b2e1510de3e3123f6faebc</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\startup_xc32.c</file>
-         <hash>f7b14be251f5909a830e4acc385c05eef35d2393328380b9bdf4c19aba912003</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\aes.h</file>
-         <hash>c92e75eb1478a49214543a20e0f54baa6595ae91f65f4110b681240f1db1b0ba</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\usbhs.h</file>
-         <hash>260d9ea39d641b8b16812e7f8b477747ea906576a399f837da8dcd9a3235a89c</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\chipid.h</file>
-         <hash>e217627841e681ee5168c8ba7cc347b48f4569662eed54556a89bd9bc1d3aa1e</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\smc.h</file>
-         <hash>00413aa1cd2146267bfd136c169a5447e314edb35388823f51670e27f2b55f25</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\aes.h</file>
-         <hash>062cad188de81ba6c6326432ed0196215f5bca45ed716a97446028b201437d54</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\mcan1.h</file>
-         <hash>9925ba5309f41a628782406b9f3455a1c21376cb57b042c3d23a3f332e921c7b</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\mcan\plib_mcan1.h</file>
-         <hash>783f76c0d4e4a3f9a189a46c59f9ca83418cfb3305fbc244c9e490a7b7c69b0a</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\usart0.h</file>
-         <hash>2ceaccc49f914abcb4f64fbcc4dfbb4dfe0c2c26bfa55b2d3919c85dc708066f</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\mcan\plib_mcan1.c</file>
-         <hash>49c80b21f4df482a67db8be026fdc5619b4a1910f5e3b8c437652026182e98e2</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\tc.h</file>
-         <hash>cd831ac0fd9237f34821b995bc3e065f3ff360573b6321ccb7a618313bf81d2b</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\pmc.h</file>
-         <hash>0a9ea131b74e6876ac83bcea8ca2cf06883b8afc91fcc407bf74ab0fdfad7def</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\i2sc0.h</file>
-         <hash>e8fc42fe25c72e42ebc5e7315399d9df4249386740be7eafa62f34d68a3524b4</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\piod.h</file>
-         <hash>2d5155fd77157ce6dd41eafd0834103d492e526a7b3ac1762e24b92466133903</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\usart.h</file>
-         <hash>43eeecd30e9ad953bba61d6c0413b6e488d2b0bdbe066622ce33e38ff602b684</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\mpu\plib_mpu.h</file>
-         <hash>727520c5779c12c056e19f9dbcdf96bd8456ef3aa0e3a25773a285b04376d015</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\efc\plib_efc.h</file>
-         <hash>7880a0c8d5ac47f4e0e4a173e28729e208a9807234ad9c26ac48c0948f8c9e90</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\uart.h</file>
-         <hash>30118be931f001c8d4826a656af1484c8cd0e00610165302bd78df5ce12f16b2</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\smc.h</file>
-         <hash>cbce266d6c85851508ccc9ee831ef48c55a688d8e28f7e45bbd6a7ecafcb9542</hash>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\device_vectors.h</file>
+         <hash>50cee28c214e424bfb711628711e010bc9e8f1f9f4e16c02c12e806b7521c833</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\exceptions.c</file>
-         <hash>1fd383302c4cdf1cc6a804aa03b8abe8c1e5e5e9ea3450438c34dcea441e6b34</hash>
+         <hash>de00e84d46e0d8933ee2fae9d699e08456443d4f80ac78f87edada9c35a9d15f</hash>
       </entry>
       <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\spi.h</file>
-         <hash>22a982b38066c68e48bbb89f9b4b4392f823e3e4a8e3d73ef2423fba2d531454</hash>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\initialization.c</file>
+         <hash>5021bd9e272c7f42d3f29a4f78b77838b08a68350351f82bef1a31a3d3de0970</hash>
       </entry>
       <entry>
-         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
-         <hash>2de01ae2556a38eb82c389de23c701805ec63308cfbcf3f84cb12141589b0858</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_iccarm.h</file>
-         <hash>f28119adbc81fb0e3c957c9aebe8fb423ad93634e76ead3caa2b0818d2e123ae</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\mpu\plib_mpu.c</file>
-         <hash>6fbc29c0a7d144e494b6b88cc8adb308d30f0466ad34c2835fd596f3debddab4</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\efc\plib_efc.c</file>
-         <hash>f68a48f3b8cad5bfef0a13c840114bbf962b54a993824bf3b8e9666204219b75</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\hsmci.h</file>
-         <hash>2a98de80113db810ecafa8fd166ea66059df2101b88606fb79a01d53bd047ba9</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\uart4.h</file>
-         <hash>b31bab9c825f737c852fe21c29275e49532abe929b4e390645fa63fed40dc257</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\matrix.h</file>
-         <hash>ec7b2e1700ba7e3c465f3922e13dc4f3ee399a200539b48e1dbced0783ed2972</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\efc.h</file>
-         <hash>8566f3b32d38cc7629f8fdf18f362e6e1cf0052bd53b2f109eaa29444a575293</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\uart0.h</file>
-         <hash>342420c5047b20e2e4bd030c5c5aaeebd9b714fdda47c8452b29ca764e36fdc7</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\rtc.h</file>
-         <hash>f485984e812eb2f88448484128343a00562ccc3c4a33d2b1aaf8e24edd0282bc</hash>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\interrupts.c</file>
+         <hash>97a811240dc451a326094503ea602185caf666e0e174cae043d3482c6de07dec</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\interrupts.h</file>
          <hash>e603db29353c48bf716c642a63c5c3a79abde2721b58f0707e68b8ccb5edfb9c</hash>
       </entry>
       <entry>
-         <file>..\src\main.c</file>
-         <hash>d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\tc1.h</file>
-         <hash>6c7a8418ad2e995173f74c49c2b99b01e6d890b7e39906e53802bd8c881c49d9</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\xdmac.h</file>
-         <hash>25f3cf7664be2fb9589bebb45b0719fc24051591c4ac05b062807a7bb6950d02</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\fuses.h</file>
-         <hash>a3adb3a2ff0c2853b494ed936c0e6529137ce13166c27ea2490eee5f2b3b4bbe</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\supc.h</file>
-         <hash>ea1a9865e9039c22733bae13d4cb3cc71353f6e9da1f533a98a67359a6e69538</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\interrupts.c</file>
-         <hash>687dc58a9356880e514cef9e23180021c7965d4d4a3250736823b84c75a1da5d</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\mcan.h</file>
-         <hash>ba76698479731dd67bded45c94d54434306521480533bb56fb65546d7853dcfb</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang_ltm.h</file>
-         <hash>8621969ea669a1b230ff2125a760ef66d575c48cb45e9e457f768909abcbda46</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\rswdt.h</file>
-         <hash>0d5ca866dca31f5a84b584d95daa84238dfe27366edd7c2eb73e93f1888f3739</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\usart1.h</file>
-         <hash>005f7cd7d504b70eebcf02599d0987b6525301dc563745605adb45e8ef6e5a10</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\mpu\plib_mpu_local.h</file>
-         <hash>73030a35f400fdc885595c7fdec97d4383017a3c3a88afc6bf98028b0d42130a</hash>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\libc_syscalls.c</file>
+         <hash>88bb2e34c939601b5b7ad076556e3ee0fcedf388436b8cddb6d6fd3e9d07472f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\clk\plib_clk.c</file>
-         <hash>7316a5f212933e2d0b58e335b7cffdb343d3464fde5402f9b948ab1decb1f20e</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\pwm.h</file>
-         <hash>70a7e5461060b3f3284bebc6523abc6b3360f16dcb9e0b2958c165efd14896cd</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\matrix.h</file>
-         <hash>6a63e48e81a8e6703512c66d6087fbeceee574decc32b0c5ec72e07096158ecc</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\isi.h</file>
-         <hash>05992dc084ab9cd5fa356a484909086f7ac6022b628854f7d5d33580f89be169</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\pioe.h</file>
-         <hash>18aca977be9e3028b0088287566b7705d28cd29cc8e6696f6e045915ba03f4a8</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\dacc.h</file>
-         <hash>eb7bf705011433e9d1371d0f0308269d46f5df67664b6ad4a283808e4be3b713</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\pioa.h</file>
-         <hash>c775fefbd337023d5226bad371efbe6a223e827895c9276f273a54987c688b04</hash>
+         <hash>d051d05632c975e9607f606c9051ea3485dba09e8d822a40e2334dffbad77236</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\clk\plib_clk.h</file>
          <hash>4f80a7fdb2529a654f89f11159078b9ebad3e5dddbd7fe60c58df49c05c8e55d</hash>
       </entry>
       <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\ssc.h</file>
-         <hash>4031861fa380f898242f6175decb7465b130632cfa8eb3e85be9e076717282d1</hash>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\efc\plib_efc.c</file>
+         <hash>ee7f7eff55be42931a6abc699fc671a3b9c40c224dee710f4eaf538997e1eb4b</hash>
       </entry>
       <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\chipid.h</file>
-         <hash>cf69e428dee5c01d86f2919ef196fe97c7a9b44cc64c0a9c53221cdf132a0023</hash>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\efc\plib_efc.h</file>
+         <hash>7880a0c8d5ac47f4e0e4a173e28729e208a9807234ad9c26ac48c0948f8c9e90</hash>
       </entry>
       <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\dacc.h</file>
-         <hash>f94045ff46d385a547279d494971427621d7ec7834b72b95cd8846f6c11dfc1b</hash>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\mcan\plib_mcan1.c</file>
+         <hash>49c80b21f4df482a67db8be026fdc5619b4a1910f5e3b8c437652026182e98e2</hash>
       </entry>
       <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\supc.h</file>
-         <hash>b8947cbc553e6b3a0dd64199c2a5087fb3ac1869404973da978b83b6a1edce4a</hash>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\mcan\plib_mcan1.h</file>
+         <hash>783f76c0d4e4a3f9a189a46c59f9ca83418cfb3305fbc244c9e490a7b7c69b0a</hash>
       </entry>
       <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\acc.h</file>
-         <hash>cf38c3be058a06e5744a70934df0e17beaec2ef8448572355a68946283fc0095</hash>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\mcan\plib_mcan_common.h</file>
+         <hash>696ed85219fc995e66be0ec5788145406623da28f7dda1e042a8f32d71110d5d</hash>
       </entry>
       <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\icm.h</file>
-         <hash>b9b57857d178e16f9aa128a10ef8b0898e133cf42876e1b94463776cac3bd148</hash>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\mpu\plib_mpu.c</file>
+         <hash>28d89b158c26266354540f3a534413bc8c4dc88ca68bef6bfbef94b1fdac3dfc</hash>
       </entry>
       <entry>
-         <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm7.h</file>
-         <hash>a361f5ff7b053831cdbbc068eae9609cd6681414c9a95c26df582d686a2378b8</hash>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\mpu\plib_mpu.h</file>
+         <hash>727520c5779c12c056e19f9dbcdf96bd8456ef3aa0e3a25773a285b04376d015</hash>
       </entry>
       <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\gpbr.h</file>
-         <hash>8cdfcf81342f36abd32d859df5ad8299b877074c3a6481be0503c80d7f51ea0e</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\rstc.h</file>
-         <hash>0379a7c8769354614de2b508d5ce9768336fafd39c212d90ffd756f9a83354d8</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\pmc.h</file>
-         <hash>413671fb70676eb743c897ce0dfdd0ae63cba36be420a9e6b010c08d46d6e43c</hash>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\mpu\plib_mpu_local.h</file>
+         <hash>73030a35f400fdc885595c7fdec97d4383017a3c3a88afc6bf98028b0d42130a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\nvic\plib_nvic.c</file>
-         <hash>8aaeed8e132a2d0ab512481b323bc7a0d3ed4c27a78d865b1ad34b32696f797b</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\twihs0.h</file>
-         <hash>7ff4ac091107e6681a111ce7e4c9801ab0abdebbf0be102f93b6a4aae7b32248</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\usart\plib_usart_common.h</file>
-         <hash>515630c93a179f33d4067575f9619de7269c9f1ebaee4496dad91fd1b58879b8</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\device_vectors.h</file>
-         <hash>0a50474ef4a3796df5f860cf55d668f2c78674f00a0d5a1d9a005c11d8297169</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\pwm1.h</file>
-         <hash>8352386ffb2927bfd703d7ac5429950b9e88f1adc2b7c126680881cd7834e91a</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\uart3.h</file>
-         <hash>5376822f4e0041b25f97bb7c2d1d27bbd618356ef918b01dbacef73099073dda</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\stdio\xc32_monitor.c</file>
-         <hash>31efc687085ecbbd86ed7e6029426bfaa81ddb5b644d7d57766b2791ca081e32</hash>
+         <hash>53398cd1ca2a16dfaff5176d040dfbc8d9b3eaa8fa30e29c4e10a8cf10f21d6d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\rswdt.h</file>
-         <hash>e415672b7fc1d1cd7c629b5af6c341c7dad98c749a27d4abf8422890e4f2c24d</hash>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\pio\plib_pio.c</file>
+         <hash>c3a16f0f9c42c56f16a8656126f47d357a34a5ffaefe16607a90cfdf9adfe0b2</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\pio\plib_pio.h</file>
+         <hash>87253708db08c9aa03fa1555403cb80629a091b4a1fdf94e3f7428d7bbecc00c</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\uart\plib_uart1.c</file>
+         <hash>171ff29eec95ae2c513872e38ab1ad7fb1193f27cd34081e8a904168e7912ce2</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\uart\plib_uart1.h</file>
+         <hash>ab133472d0a18b4ddc95c04ca9ecffbb9d348f2d454aa19cc248e167fa8b444b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\peripheral\uart\plib_uart_common.h</file>
+         <hash>345a16690828c424b43be3f872bea3aedf52658df320f0db8de261fedb4f8274</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\pin_configurations.csv</file>
+         <hash>1924978dbe7a0dc658cf319af1a15b98b07ccd5e6a0fe77b79f55686bf5df466</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\startup_xc32.c</file>
+         <hash>f7b14be251f5909a830e4acc385c05eef35d2393328380b9bdf4c19aba912003</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca70_curiosity_ultra\stdio\xc32_monitor.c</file>
+         <hash>34c7efa285dd6778faf01a0097bf7bebc131e7a8a0ed97bb737ff3e0a39895d2</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\toolchain_specifics.h</file>
          <hash>406ef48ae415706beb0796977cab09342077f7b1efc3f24767bd97bbd5e5a433</hash>
       </entry>
       <entry>
-         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\tc0.h</file>
-         <hash>e3bc4a489d22ecd2be2d5ab5145a8c92857d9ae1a3ee4c7ad69d66b9c3bcb6bc</hash>
+         <file>..\src\main.c</file>
+         <hash>d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32cz_ca70_curiosity_ultra\device.h</file>
-         <hash>d3fa0c4731e363e46dd050fe9faed0c1c67626d1b1501883c7fbfe67991291ea</hash>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cachel1_armv7.h</file>
+         <hash>6cdb5b324f2fd1bb5b2f47298ba6e6777e735d7cad3bb8d942cd36e2c6e65328</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h</file>
+         <hash>d074534d7106cec83474b3b0a897bd2553e1a8895ecbd54f4f4fb25928066eee</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang.h</file>
+         <hash>11b39b96ddc1125124762b3423a77b90dd40ea5b4582a3513830245046b24311</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang_ltm.h</file>
+         <hash>8621969ea669a1b230ff2125a760ef66d575c48cb45e9e457f768909abcbda46</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</file>
+         <hash>869640702d811c4c63abb52206715c891a93fd03be954df5ad40d378355af3d6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_gcc.h</file>
+         <hash>3d4e265d0aa42f888385ccf073666e6ebb5ec9f834760b9da27c474e177f708d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_iccarm.h</file>
+         <hash>f28119adbc81fb0e3c957c9aebe8fb423ad93634e76ead3caa2b0818d2e123ae</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
+         <hash>8cda7ac3ff6f0eb5e83c4fe613dd195151b24da54167f5c3c007e599a03f1edc</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm7.h</file>
+         <hash>a361f5ff7b053831cdbbc068eae9609cd6681414c9a95c26df582d686a2378b8</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv7.h</file>
+         <hash>de1b5eb9ed566527b66dc06f4ecb6a43ab6800f7dac47e87c9cb42984dca41bb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\acc.h</file>
+         <hash>d718db07a5d2abc888b9773b3657b2e64da9386fd47905382767a0684e63220c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\aes.h</file>
+         <hash>258c965c51b480683521848c98a28f364ffbca5a856187f1e5d132360d883d3c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\afec.h</file>
+         <hash>8becf13fd8d4fc70a41e351c2cf0f0b39b05d4ac87a8a3a760882f0530bfb99a</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\chipid.h</file>
+         <hash>5b0f291f8a0c9f31f7324d232f6ef75c18f08b428dc6b3968b7e0ee4ec3f62bb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\dacc.h</file>
+         <hash>7e21139a2b9ef6249b7c75e47d2f0d99b17c9e024c1e5a9af7a22ca46b3d7554</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\efc.h</file>
+         <hash>a248c00b3cdb8a04297e15e306a908e9cabfd5f199bc8192eb01246640857c7d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\fuses.h</file>
+         <hash>d744266cefbe575e54741ef0127efc19b1abce1a0a4fb229a947465a49d05d0d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\gmac.h</file>
+         <hash>274512eb256297a06db04f52a02a89b11a55ca0beadd9b393b3512b4dd66fd75</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\gpbr.h</file>
+         <hash>0c1421903dbe6bcd16ce5644c0f7a21aabc2da738f0b29bc3c313ef3a258d4d3</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\hsmci.h</file>
+         <hash>07b95143d6faf7dca549c1e3ad9f7058f3e8832d96bfab1423296509597954cc</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\i2sc.h</file>
+         <hash>1b2f68c55e8e381a274cba12d9c8f14640fc5b1053fdfaa009b18b8e1e1084ec</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\icm.h</file>
+         <hash>a64db94e635026d8642ba5fff173ea9883f91193ea9d94bba5630fb77a4792aa</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\isi.h</file>
+         <hash>e55b81bd892e4439ffc3458d23a096dba7f2402627100dad6d4b82bdcee14f82</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\matrix.h</file>
+         <hash>3c5ca2164e7d7036be6434c1c504b454ec4e14c65236380cabe8c5b083c93461</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\mcan.h</file>
+         <hash>dce8b553382cde148b038407f2f36d5df1082a5c0185326c61ea914e3207b8ce</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\mlb.h</file>
+         <hash>8e13c5e7166a81727907f906652bfd7f0431919d8a892622eeeaa7122c05986c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\pio.h</file>
+         <hash>d37568ee0c5d667243e55c0931c52ebc4f91de2d02b3e79dc602b2202e46fa74</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\pmc.h</file>
+         <hash>7686da4dcc97e169b8d8ca1f41437f30fb15e19e7bc5ab8d41248991834c4439</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\pwm.h</file>
+         <hash>de92d70a1ea5b4d087dac9b5653eda37dab348144aa8943f657833c23f41954b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\qspi.h</file>
+         <hash>041b8779cdab58259ba103631d0e8778a850d4ae4c55b6a204180aee36e10931</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\rstc.h</file>
+         <hash>56f4ea04aa658821e196e1a7baa7cbbe0a927812164bfa9fdb104b9e9306c195</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\rswdt.h</file>
+         <hash>1595827abc4bec5ce850361e314000d6805a758dd1f76c9fe9aa0d5c2e556df1</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\rtc.h</file>
+         <hash>8efd2b3bd923ca697f67183528c92e32215059f4e2fef2b28e270c2817ac8508</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\rtt.h</file>
+         <hash>a342099c7d5d96ae57087d4c62a3c54a7c488b3981c8efb9a9da4c1e52c89d2e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\smc.h</file>
+         <hash>1374d78b0d5942f0227bb2944ae39107489901d9ff7af153f68aee313ddd1e83</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\spi.h</file>
+         <hash>ee540f89e0e2e07475de2f883f1f9f54880edb5da2f1afabff5fd350dee9ddb5</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\ssc.h</file>
+         <hash>38d8b5c22e2436d3909cef8d4a1a183972e519c0f02af30a933e2d2e5719d7ec</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\supc.h</file>
+         <hash>ea2b443a6b51a5ed2a70eca7d66ca1ff5dae48dd199b6a35ed82f7aab7e993a1</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\tc.h</file>
+         <hash>18682b212232f3234a27656560d8aefde0f57a5ebed430fb98dbd092f5b85716</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\trng.h</file>
-         <hash>596e902c4669af0971ac41f4125c820b9dcabfb69b3cfdf378cbfdd36f5ef97d</hash>
+         <hash>0f90175a495e249df46971abf66c6ff457d14628a10820a53cb9b6a91d5e2918</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\twihs.h</file>
+         <hash>51ab5f040929980c76dc25805098e07fb762f016fcf27e3f5ed6b443bac8cc3c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\uart.h</file>
+         <hash>a308391d770db52383fcdb14e661fd02cb9955809447c4eefa8e9d3a84cecf03</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\usart.h</file>
+         <hash>a0bc65effba4b97f4c49706d92823f1a0c2ca05cb85fc2f994a7a34b459f27f8</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\usbhs.h</file>
+         <hash>2d4ef3988274496b1b1f899eaec60f8f7bc74a98922a87a4b22eeba77125aa06</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\utmi.h</file>
+         <hash>6313b78bfbb4e9805acfcf621de597f9997dc726ff1405bdeac7e5d691c50c31</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\wdt.h</file>
+         <hash>7bdff1bd70d9275cd6a33df352cb8a0aac24f9438cc8bfb014e1897113348488</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\component\xdmac.h</file>
+         <hash>46ca2f55b5846461b19cfb0b6b671fd3731f61661e09d493098453f4cddaab75</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\acc.h</file>
+         <hash>48c4eef7d3a46570ea58352121cd174c2ae6e87e493efa0ace848f8df43291a3</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\aes.h</file>
+         <hash>333e24d1e0314ab1ed9f9bbb00ecda214241631b2d813d09f840119a9d170dc4</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\afec0.h</file>
+         <hash>21608c771e3f874e3bd59b35093e6e970cf56228ba12b04edfdcad78cb5b7174</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\afec1.h</file>
+         <hash>1c12a65d67d8f230d44f6283eccdbe9038f4b11f940a164eda7b0cece26ed4ef</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\chipid.h</file>
+         <hash>14dee20836b18996a0fc3c8d4eec7cca2deb82c3a9da19b282ebe66133b34451</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\dacc.h</file>
+         <hash>d4c4dfe3cb68378312efcebe95d0cb4e62776bd6644849a1c5a22067ae6e3f48</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\efc.h</file>
+         <hash>ad4e7fad5770c1bd05917ffb2f86fc7b0577bdf6b7973a8c50daba497c4a2382</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\fuses.h</file>
+         <hash>7263c35ca6f365bd81a9060215e0e6844095f03aa5f9de65ced181683ea44639</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\gmac.h</file>
+         <hash>393ce0eb83480245e6933cb2738df060d81584b0edac68855292e64f83aa59dd</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\gpbr.h</file>
+         <hash>08c9ec077c8b08f52e78670296f75eb34b773823518458f0ea4df21a698cd34e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\hsmci.h</file>
+         <hash>3cfc96da3c3e72c63c81c08048a3a52b4f4dcd2e5785674b8b7f28d7ad6fa8fb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\i2sc0.h</file>
+         <hash>ad51131229a6df9c9316d5615c46f483089235f0e75e501a75b372c5bef3031d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\i2sc1.h</file>
+         <hash>ac39de8dc2ff16bda28b47ee98b029fc66f21652f23554bab7e8577d867280c1</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\icm.h</file>
+         <hash>b482bb55c537fb036bc0c9b57dd896776114ac39da98abbe3904e258e57c4224</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\isi.h</file>
+         <hash>e14ed72920ae926d2ae65963ba9d65e770ec9de07cdb0b5ead9c6dc90087d5b9</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\matrix.h</file>
+         <hash>54c29983004681c501c3a832d1ee1ec24a3c139d857dbe5746838fc05f49b703</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\mcan0.h</file>
+         <hash>5a32681d5badd825751c464bf4848370bf6f70e78744f47201bc0934f0c7010a</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\mcan1.h</file>
+         <hash>a1ff279073f7148e6390083941f53781c6e99544be034023179b15c4da004ee3</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\mlb.h</file>
+         <hash>6dd564464f58c466e2c747a6f47fda95631b4fe144d1597538c8421f553d3667</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\pioa.h</file>
+         <hash>afac8bb4320afb9d379965ffbdb1403e00dfec02739c6e15cffe6daf42ff9659</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\piob.h</file>
+         <hash>b725ba159b5ed73e5af322631dada15ff4c9013183ac01ed3cccce9f18c7fb30</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\pioc.h</file>
+         <hash>f9c72023d7c9099015e0427698b0dbf9119b3282c4f7c761e98818f5fc233a42</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\piod.h</file>
+         <hash>bb29c8eae13daa0955869e84dc187996e029c3ecc74657c917f565346e30cf32</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\pioe.h</file>
+         <hash>5b536d7829a862188f0253ee99053333575815ece2269c2a98bfaa264ebde2b6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\pmc.h</file>
+         <hash>7e5e2439895a5296ca40fe27e5e0cb8adbb892f04c5b45efaba0d86dbb1c7186</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\pwm0.h</file>
+         <hash>c0683e19a9ed042830e4625bce41f353988d386d22cd3e8957b6861210b106d1</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\pwm1.h</file>
+         <hash>9a4434c1e9f84f2daf87cfd66f148760cfe73b51157333089df5f847d1351367</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\qspi.h</file>
+         <hash>e9c3a97858b0e482945a4a9d4f2ec3923298375e32bc03f42d82f944cd241c13</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\rstc.h</file>
+         <hash>291c7ba221265d305c89594eb286acdd843b3fb53043ef5e4ae5528b81a5c907</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\rswdt.h</file>
+         <hash>2d4934718851e70d2ee69e639772ad1443fecdabe37b3f200df86f3ffb76fa9b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\rtc.h</file>
+         <hash>053937447fac751c49350acbea9b712b94e3dc74af3204f5c3f22b276e7342a4</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\rtt.h</file>
+         <hash>4aa1dfaf8e8e011aa3d7e6685e2a4c5540a4553eb8cb838a6cae44936a7e442d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\smc.h</file>
+         <hash>4134989a33eaff419bb169d94fd18b8dabf03c555c6ff5ab65c47893e73eec03</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\spi0.h</file>
+         <hash>c4f92bf7529fd7ec5b306fb97ebb544a11f9d65dcafda589bc696f8509be7a4e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\spi1.h</file>
+         <hash>0cff4d94d52f7fb027cbce405879fe34d0b763b81c023c47c3044cb15365f564</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\ssc.h</file>
+         <hash>4a07b46af343a12bab36fa2c984783c0b410d57276f9f724db304d5bc62858c6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\supc.h</file>
+         <hash>1014ec0f56b75458bf08882445478899a28d3846e4ddf739498f37d27885da2e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\tc0.h</file>
+         <hash>15c4ff7d9213959d7fbf9123c906aed0bd432e47327865932a9d25b286c749a5</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\tc1.h</file>
+         <hash>0092e8e80def945732eda69e73ec9f553aea6bbc79d219fe052f70b667b409fd</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\tc2.h</file>
+         <hash>ea43298dd726c6f396063d1e8577954ea430df27e2fa7661261078600d01f26a</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\tc3.h</file>
+         <hash>daeb1f96d471f78e5e1ce125e0bd509e7276b71b72c50538d936c24fc3f50cb3</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\trng.h</file>
+         <hash>96080620426ae228c6b9f958e18e37c31abaa2cc41ea56c347a5ebd459d6b644</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\twihs0.h</file>
+         <hash>7729407946766fd687d0627fee621b462b35e311131ee5809ff9bff2abfb5da2</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\twihs1.h</file>
+         <hash>49287a8a2c6d788f0c102a29d2f852a35fbc51e5e3b9025da8a814bd7e8acf08</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\twihs2.h</file>
+         <hash>607e56398adc9c8e0f1217999bd58ae5a9f079e13ebdd01452e06a76dc3bc409</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\uart0.h</file>
+         <hash>0ec50166ed8f6bff84a9beeecad1d1208118f5725ddbbed7e0e2628937bbdbd3</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\uart1.h</file>
+         <hash>f22ca4ddeb407b526071cd4a06dda54c6b182232e51ac167d0ab9f3ed24c0556</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\uart2.h</file>
+         <hash>a848e6e705b233469ce927e10f1d964a0d158eb43a36df77028db2a8e436fc1e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\uart3.h</file>
+         <hash>42df507d84a89e899becf1f871cabea870453eec1e0b9e4235bc2320b93a1a4e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\uart4.h</file>
+         <hash>f63e4d44d788b77c10493d944737199d13829a8aa2e9f5ef8884733da850f641</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\usart0.h</file>
+         <hash>5165c979199b5e58724f99515056e1fa121893597c8dab3f036300230dfc45d6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\usart1.h</file>
+         <hash>90ebf57d554a37e18d976274bcd0d496385677d3a21fb43c3070e1036d4a8ecc</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\usart2.h</file>
+         <hash>50cdcf5fea33d1549d45ed5bc478e93b9408000603aad460c5e0b7a0d406c613</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\usbhs.h</file>
+         <hash>e6bbe5ddc427b80599ead5d7df87feea352159785a0cb3926da93a0581dcca19</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\utmi.h</file>
+         <hash>4de91ac5630e21519fe7c21b1935c9e6caba673a59e7160de4355b1543f79892</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\wdt.h</file>
+         <hash>c0ea1d2a087bac78aff619d4ba8795c9a1c3bb77d37d5430ac91c6209f95feae</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\instance\xdmac.h</file>
+         <hash>dad159c4c2b3c53cfab171a7326462f4c3a888867916893bba04d7efc0a15057</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\pic32cz2051ca70144.h</file>
+         <hash>e0ed9fbc6d9328adcb886f74168f375206264c9cab7b0e2a2356117d071a744d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ2051CA70144_DFP\pio\pic32cz2051ca70144.h</file>
+         <hash>294d273dc139ce6b2c1f5d70554cec7ca890416326e67f903c46b31521ffe258</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
