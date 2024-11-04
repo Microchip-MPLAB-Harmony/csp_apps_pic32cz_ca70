@@ -158,11 +158,11 @@ int main ( void )
         }
 
         /* User input */
-        if (USART1_ReceiverIsReady() == false)
+        if (UART1_ReceiverIsReady() == false)
         {
             continue;
         }
-        user_input = (uint8_t)USART1_ReadByte();
+        user_input = (uint8_t)UART1_ReadByte();
 
         switch (user_input)
         {
