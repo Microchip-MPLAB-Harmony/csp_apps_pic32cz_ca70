@@ -56,7 +56,7 @@ void DACC_Initialize (void)
     DACC_REGS->DACC_MR = DACC_MR_PRESCALER(15U) ;
 
     /* Configure DACC Bias Current */
-    DACC_REGS->DACC_ACR = DACC_ACR_IBCTLCH0(3U);
+    DACC_REGS->DACC_ACR = DACC_ACR_IBCTLCH0(1U);
 
     /* Enable DAC Channel */
     DACC_REGS->DACC_CHER = DACC_CHER_CH0_Msk;

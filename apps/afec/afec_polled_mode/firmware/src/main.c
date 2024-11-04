@@ -53,13 +53,13 @@
 #include <stdio.h>
 #include "definitions.h"                // SYS function prototypes
 
-#define AFEC_VREF               (3.3f)
-#define DAC_COUNT_INCREMENT     (124U)  // equivalent to 0.1V 
+#define AFEC_VREF               (2.048f)
+#define DAC_COUNT_INCREMENT     (204U)  // equivalent to 0.1V 
 #define DAC_COUNT_MAX           (4095U)
 
 uint16_t adc_count;
 float input_voltage;
-/* Initial value of dac count which is midpoint = 1.65 V*/
+/* Initial value of dac count which is midpoint = 1.0 V*/
 uint16_t dac_count = 0x800;   
 
 

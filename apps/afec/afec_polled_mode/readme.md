@@ -44,17 +44,12 @@ The following table shows the target hardware for the application projects.
 
 - An analog input (AD0) is fed from the DAC output. DAC output is incremented by 0.1 V on Switch (SW0) press
 - An analog input "AD0" is mapped to Port Pin "PB1" that is routed to "Pin 14 of the EXT1 header"
-- The DAC output "DAC0" is mapped to Port Pin "PB13" that is routed to "Pin 5 of the J502 header"
-- Use a jumper wire to connect "Pin 14 of the EXT1" to "Pin 5 of the J502"
+- The DAC output "DAC0" is mapped to Port Pin "PB13" that is routed to "Pin 8 of the EXT2 header"
+- Use a jumper wire to connect "Pin 14 of the EXT1" to "Pin 8 of the EXT2"
+- Connect 3.3V from pin 4 of J401 to VREFIN pin on J302. This generates 2.048V reference voltage (VREFP) for the DAC.
+- Connect GND from pin 6 of J401 to GND pin on J302.
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
-### Setting up [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)
-
-- An analog input (AD0) is fed from the DAC output. The DAC output is incremented by 0.1 V on Switch (SW0) press
-- An analog input "AD0" is mapped to Port Pin "PB1" that is routed to "Pin 14 of the EXT1 header"
-- The DAC output "DAC0" is mapped to Port Pin "PB13" that is routed to "Pin 5 of the J504 header"
-- Use a jumper wire to connect "Pin 14 of the EXT1" to "Pin 5 of the J504"
-- Connect the Debug USB port on the board to the computer using a micro USB cable
 
 ## Running the Application
 
@@ -67,8 +62,9 @@ The following table shows the target hardware for the application projects.
     - Flow Control : None
 3. Build and Program the application using its respective IDE
 4. The console displays the ADC Count and the ADC Input Voltage
-5. Press the switch to change the DAC output by 0.1 V from 0 V to 3.3 V
+5. Press the switch to change the DAC output by 0.1 V from 0 V to 2.048 V
 6. Observe the ADC input value and the respective ADC count value
+7. Note that the VREFP for both DAC and AFEC modules is 2.048V. As a result, the DAC and AFEC output will saturate at 2.048V.
 
 ![output](images/output_afec_polling_mode.png)
 
