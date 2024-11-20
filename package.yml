@@ -1,0 +1,12 @@
+package:
+  format-version: "1.0.0"
+  name: "csp_apps_pic32cz_ca70"
+  version: "v3.0.0"
+  type: "application"
+  status: "production"
+  required: false
+
+  dependencies:
+    - name: "csp"
+      type: "package"
+      version: "v3.20.0"
