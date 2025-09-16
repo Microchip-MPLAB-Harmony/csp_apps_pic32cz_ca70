@@ -165,9 +165,18 @@
       <itemPath>../src/app_xip_image_pattern_hex.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
+      <logicalFolder name="qspi_xip_main_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra" displayName="qspi_xip_main_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra" projectFiles="true">
+        <itemPath>qspi_xip_main_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/mcc-config.mc4</itemPath>
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>qspi_xip_main_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/components/cmsis.yml</itemPath>
+          <itemPath>qspi_xip_main_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/components/core.yml</itemPath>
+          <itemPath>qspi_xip_main_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/components/dfp.yml</itemPath>
+          <itemPath>qspi_xip_main_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/components/efc.yml</itemPath>
+          <itemPath>qspi_xip_main_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/components/qspi.yml</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32cz_ca70_curiosity_ultra/harmony-manifest-success.yml</itemPath>
-      <itemPath>qspi_xip_main_pic32cz_ca70_curiosity_ultra.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
@@ -230,11 +239,11 @@
         <targetPluginBoard/>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32CZ-CA70_DFP" vendor="Microchip" version="1.0.10"/>
+        <pack name="PIC32CZ-CA70_DFP" vendor="Microchip" version="1.2.32"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
