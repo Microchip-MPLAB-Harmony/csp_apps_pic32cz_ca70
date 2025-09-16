@@ -164,9 +164,19 @@
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
+      <logicalFolder name="dacc_wav_gen_dma_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra" displayName="dacc_wav_gen_dma_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra" projectFiles="true">
+        <itemPath>dacc_wav_gen_dma_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/mcc-config.mc4</itemPath>
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>dacc_wav_gen_dma_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/components/cmsis.yml</itemPath>
+          <itemPath>dacc_wav_gen_dma_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/components/core.yml</itemPath>
+          <itemPath>dacc_wav_gen_dma_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/components/dacc.yml</itemPath>
+          <itemPath>dacc_wav_gen_dma_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/components/dfp.yml</itemPath>
+          <itemPath>dacc_wav_gen_dma_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/components/efc.yml</itemPath>
+          <itemPath>dacc_wav_gen_dma_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/components/tc0.yml</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32cz_ca70_curiosity_ultra/harmony-manifest-success.yml</itemPath>
-      <itemPath>dacc_wav_gen_dma_pic32cz_ca70_curiosity_ultra.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
@@ -228,12 +238,12 @@
         <targetPluginBoard/>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="PIC32CZ-CA70_DFP" vendor="Microchip" version="1.0.10"/>
+        <pack name="PIC32CZ-CA70_DFP" vendor="Microchip" version="1.2.32"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
