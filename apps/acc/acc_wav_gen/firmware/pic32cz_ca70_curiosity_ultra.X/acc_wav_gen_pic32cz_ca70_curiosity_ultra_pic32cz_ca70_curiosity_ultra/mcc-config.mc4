@@ -16,7 +16,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32cz_ca70_curiosity_ultra\PIC32CZ2051CA70144.ld
   hash: 0f33db6e79d29f925a832f01aff67f5a0a8b8e9120d296c238e1d4174eb0de81
 - file: ..\src\config\pic32cz_ca70_curiosity_ultra\definitions.h
-  hash: f907e8ad54a08097aeed469a00a20392013a4c4c76157ad003816321375568c8
+  hash: 7e1529b5ded436ac82dc576caa9e829afb4897a510538b293a7f8613fa298c13
 - file: ..\src\config\pic32cz_ca70_curiosity_ultra\device.h
   hash: a7307b47c912aeebd3dc44830c8c567914683bceda9c4472156aaf78d2a2f76a
 - file: ..\src\config\pic32cz_ca70_curiosity_ultra\device_cache.h
@@ -26,7 +26,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32cz_ca70_curiosity_ultra\exceptions.c
   hash: de00e84d46e0d8933ee2fae9d699e08456443d4f80ac78f87edada9c35a9d15f
 - file: ..\src\config\pic32cz_ca70_curiosity_ultra\initialization.c
-  hash: 89336bbcc44a8509184ed60b1151f4ee9636c25d90cc489500e904b7c5d25b4f
+  hash: 6c3bae67605743b82cefde750cbf85873bcced483772fc14b1c864a28b894d4c
 - file: ..\src\config\pic32cz_ca70_curiosity_ultra\interrupts.c
   hash: 7bd5c44ffc472d38f185737b592a1900c9217ac3faf4362df72b0e092fcf54c7
 - file: ..\src\config\pic32cz_ca70_curiosity_ultra\interrupts.h

@@ -164,20 +164,20 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
-      <logicalFolder name="usart_echo_interrupt_pic32cz_ca70_curiosity_ultra"
-                     displayName="usart_echo_interrupt_pic32cz_ca70_curiosity_ultra"
+      <logicalFolder name="uart_echo_interrupt_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra"
+                     displayName="uart_echo_interrupt_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra"
                      projectFiles="true">
         <logicalFolder name="components" displayName="components" projectFiles="true">
-          <itemPath>usart_echo_interrupt_pic32cz_ca70_curiosity_ultra/components/cmsis.yml</itemPath>
-          <itemPath>usart_echo_interrupt_pic32cz_ca70_curiosity_ultra/components/core.yml</itemPath>
-          <itemPath>usart_echo_interrupt_pic32cz_ca70_curiosity_ultra/components/dfp.yml</itemPath>
-          <itemPath>usart_echo_interrupt_pic32cz_ca70_curiosity_ultra/components/efc.yml</itemPath>
-          <itemPath>usart_echo_interrupt_pic32cz_ca70_curiosity_ultra/components/uart1.yml</itemPath>
+          <itemPath>uart_echo_interrupt_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/components/cmsis.yml</itemPath>
+          <itemPath>uart_echo_interrupt_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/components/core.yml</itemPath>
+          <itemPath>uart_echo_interrupt_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/components/dfp.yml</itemPath>
+          <itemPath>uart_echo_interrupt_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/components/efc.yml</itemPath>
+          <itemPath>uart_echo_interrupt_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/components/uart1.yml</itemPath>
         </logicalFolder>
-        <itemPath>usart_echo_interrupt_pic32cz_ca70_curiosity_ultra/mcc-config.mc4</itemPath>
+        <itemPath>uart_echo_interrupt_pic32cz_ca70_curiosity_ultra_pic32cz_ca70_curiosity_ultra/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32cz_ca70_curiosity_ultra/harmony-manifest-success.yml</itemPath>
+      <itemPath>../src/config/pic32cz_ca70_curiosity_ultra/pin_configurations.csv</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -225,7 +225,6 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
-      <itemPath>../src/config/pic32cz_ca70_curiosity_ultra/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -246,7 +245,7 @@
       </toolsSet>
       <packs>
         <pack name="PIC32CZ-CA70_DFP" vendor="Microchip" version="1.2.32"/>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
+        <pack name="CMSIS" vendor="ARM" version="5.9.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

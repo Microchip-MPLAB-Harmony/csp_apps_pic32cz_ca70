@@ -131,14 +131,14 @@ void SYS_Initialize ( void* data )
 
 	DACC_Initialize();
 
-	ACC_Initialize();
-
   
 
  
     TC0_CH0_TimerInitialize(); 
      
     
+	ACC_Initialize();
+
 
     NVIC_Initialize();
 

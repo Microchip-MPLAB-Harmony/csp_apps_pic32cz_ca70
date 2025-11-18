@@ -14,7 +14,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32cz_ca70_curiosity_ultra\PIC32CZ2051CA70144.ld
   hash: 0f33db6e79d29f925a832f01aff67f5a0a8b8e9120d296c238e1d4174eb0de81
 - file: ..\src\config\pic32cz_ca70_curiosity_ultra\definitions.h
-  hash: e715dc67705ce90c11c37407709dbb01de80654adfc9cb35ea96062c223c6779
+  hash: a0d58026fdb613060acfaaaf26e3db11c91df4c99485e29a66f3d0b8368de531
 - file: ..\src\config\pic32cz_ca70_curiosity_ultra\device.h
   hash: a7307b47c912aeebd3dc44830c8c567914683bceda9c4472156aaf78d2a2f76a
 - file: ..\src\config\pic32cz_ca70_curiosity_ultra\device_cache.h
