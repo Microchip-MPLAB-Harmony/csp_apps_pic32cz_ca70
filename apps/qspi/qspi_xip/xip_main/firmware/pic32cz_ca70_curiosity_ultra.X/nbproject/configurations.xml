@@ -167,7 +167,6 @@
           <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/pic32cz2051ca70144.h</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>../src/app.h</itemPath>
       <itemPath>../src/app_xip_image_pattern_hex.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -239,7 +238,6 @@
           <itemPath>../src/config/pic32cz_ca70_curiosity_ultra/libc_syscalls.c</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>../src/app.c</itemPath>
       <itemPath>../src/main.c</itemPath>
     </logicalFolder>
   </logicalFolder>
