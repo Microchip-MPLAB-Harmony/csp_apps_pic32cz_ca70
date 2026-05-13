@@ -170,7 +170,6 @@ void setup_RTC(void)
 
 int main ( void )
 {
-    setbuf(stdout, NULL);
     /* Initialize all modules */
     SYS_Initialize ( NULL );
     printf("\n\n\r----------------------------------------------");

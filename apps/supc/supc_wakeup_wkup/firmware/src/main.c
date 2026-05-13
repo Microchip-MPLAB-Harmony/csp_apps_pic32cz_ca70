@@ -99,7 +99,6 @@ void display_menu (void)
 
 int main ( void )
 {
-    setbuf(stdout, NULL);
     /* Initialize all modules */
     SYS_Initialize ( NULL );
 
