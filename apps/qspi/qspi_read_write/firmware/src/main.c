@@ -63,7 +63,7 @@
 #define SECTOR_SIZE                (4096U)
 
 /* Erase, Write and Read 80KBytes of memory */
-#define SECTORS_TO_EWR             (20U)
+#define SECTORS_TO_EWR             (04U)
 
 #define BUFFER_SIZE                (SECTOR_SIZE * SECTORS_TO_EWR)
 
@@ -237,7 +237,7 @@ typedef enum
 // *****************************************************************************
 // *****************************************************************************
 
-APP_DATA appData;
+static APP_DATA appData;
 
 static uint32_t write_index = 0;
 static uint32_t sector_index = 0;
@@ -455,7 +455,7 @@ static APP_TRANSFER_STATUS APP_SectorErase(uint32_t address)
     Initializes the application state machine and data structures.
  */
 
-void APP_Initialize ( void )
+static void APP_Initialize(void)
 {
     uint32_t i = 0;
 
@@ -477,7 +477,7 @@ void APP_Initialize ( void )
     Executes the application state machine for QSPI operations.
  */
 
-void APP_Tasks ( void )
+static void APP_Tasks(void)
 {
     /* Check the application's current state. */
     switch ( appData.state )
@@ -485,7 +485,9 @@ void APP_Tasks ( void )
         case APP_STATE_INIT:
         {
             appData.state = APP_STATE_RESET_FLASH;
-        }
+			
+            break;
+		}
 
         case APP_STATE_RESET_FLASH:
         {
