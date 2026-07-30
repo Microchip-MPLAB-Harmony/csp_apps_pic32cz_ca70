@@ -50,13 +50,16 @@
 #include <stddef.h>                     // Defines NULL
 #include <stdbool.h>                    // Defines true
 #include <stdlib.h>                     // Defines EXIT_FAILURE
-#include <stdio.h>
-#include <string.h>
+#include <string.h>                     // Defines memset, memcmp
+#include <stdio.h>                      // Defines printf
+#if defined(__ICCARM__) || defined(__IAR_SYSTEMS_ICC__)
+#include <intrinsics.h>                 // Defines __get_LR
+#endif
 #include "definitions.h"                // SYS function prototypes
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Type Definitions
+// Section: Application Definitions and Types (from app.h)
 // *****************************************************************************
 // *****************************************************************************
 
@@ -235,21 +238,38 @@ typedef enum
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Global Data Definitions
+// Section: Global Data Definitions (from app.c)
 // *****************************************************************************
 // *****************************************************************************
 
-APP_DATA appData;
+static APP_DATA appData;
 
-/* Linker-defined symbols for QSPI Region. */
+/* Linker-defined symbols/sections for the QSPI Region.
+ *
+ * XC32 (GNU ld): the custom linker script places ".code_in_qspi" with an
+ * execution address (VMA) in the "qspi" memory region and a load address
+ * (LMA) in "rom" right after "_etext". _start_qspi/_end_qspi mark the
+ * execution address range; _etext marks the load address of the section's
+ * initial image in internal Flash.
+ *
+ * IAR (ILINK): the ".code_in_qspi" block is placed in QSPI_region, and
+ * "initialize manually by copy" makes the linker generate a load image of
+ * that same block in ROM_region -- as ".code_in_qspi_init" -- without any
+ * automatic startup copy, mirroring the XC32 VMA/LMA split above.
+ */
+#if defined(__ICCARM__) || defined(__IAR_SYSTEMS_ICC__)
+#pragma section = ".code_in_qspi"
+#pragma section = ".code_in_qspi_init"
+#else
 extern uint32_t _start_qspi, _end_qspi, _etext;
+#endif
 
 static uint32_t erase_index = 0;
 static uint32_t write_index = 0;
 static uint32_t qspi_start, qspi_end;
 static uint8_t *qspi_loadMemAddr;
 static uint32_t qspi_length;
-uint8_t *verify_qspiMemory = NULL;
+static uint8_t *verify_qspiMemory = NULL;
 
 static qspi_command_xfer_t qspi_command_xfer = { 0 };
 static qspi_register_xfer_t qspi_register_xfer = { 0 };
@@ -257,7 +277,7 @@ static qspi_memory_xfer_t qspi_memory_xfer = { 0 };
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Application Local Functions
+// Section: Application Local Functions (from app.c)
 // *****************************************************************************
 // *****************************************************************************
 
@@ -463,7 +483,7 @@ static APP_TRANSFER_STATUS APP_TransferStatusCheck(void)
 }
 
 /* Reads n Bytes of data from the flash memory */
-APP_TRANSFER_STATUS APP_MemoryRead( uint32_t *rx_data, uint32_t rx_data_length, uint32_t address )
+static APP_TRANSFER_STATUS APP_MemoryRead( uint32_t *rx_data, uint32_t rx_data_length, uint32_t address )
 {
     memset((void *)&qspi_memory_xfer, 0, sizeof(qspi_memory_xfer_t));
 
@@ -570,7 +590,11 @@ static APP_TRANSFER_STATUS APP_SectorErase(uint32_t address)
 // *****************************************************************************
 
 /* If a function placed in Internal flash memory has to be called from
- * QSPI Flash memory it has to be defined with "long_call" compiler attribute.
+ * QSPI Flash memory it has to be defined with "long_call" compiler attribute
+ * under XC32/GCC, since the QSPI region is far outside the +-16MB range of a
+ * direct branch. IAR's ILINK linker inserts range-extension veneers for such
+ * out-of-range calls automatically, so no equivalent attribute is needed
+ * under IAR.
  *
  * Below delay_ms() is a wrapper function with "long_call" attribute defined in
  * Internal Flash memory to invoke SYSTICK PLIB and printf which are also
@@ -578,26 +602,44 @@ static APP_TRANSFER_STATUS APP_SectorErase(uint32_t address)
  *
  * "noinline" attribute is used so that compiler does not make this function inline
  */
+#if defined(__ICCARM__) || defined(__IAR_SYSTEMS_ICC__)
+static __attribute__((noinline)) void delay_ms(uint32_t delay, char const * caller_name)
+#else
 static __attribute__((noinline, long_call)) void delay_ms(uint32_t delay, char const * caller_name)
+#endif
 {
+#if defined(__ICCARM__) || defined(__IAR_SYSTEMS_ICC__)
+    void const * const returnAddr = (void const *)__get_LR();
+#endif
     SYSTICK_DelayMs(delay);
 
     printf("\r\nInternal Flash function %s called from QSPI Flash function %s with Return Address (%p)\r\n",
             __FUNCTION__,
             caller_name,
+#if defined(__ICCARM__) || defined(__IAR_SYSTEMS_ICC__)
+            returnAddr);
+#else
             __builtin_return_address(0));
+#endif
 }
 
 /* Below blink_led() function is placed in QSPI flash memory region.
  *
- * ".code_in_qspi" is a special section created in custom linker file to place
- * function in QSPI Flash memory region. Any function placed in this section
- * should have "long_call" compiler attribute.
+ * ".code_in_qspi" is a special section created in the custom linker file to
+ * place this function in the QSPI Flash memory region. Under XC32/GCC, any
+ * function placed in this section should have the "long_call" compiler
+ * attribute. Under IAR, "#pragma location" places the function in the
+ * section and no equivalent attribute is required (see note above delay_ms).
  *
  * This function can call any internal flash function which are defined with
- * "long_call" compiler attribute.
+ * "long_call" compiler attribute (XC32/GCC) or plainly (IAR).
  */
+#if defined(__ICCARM__) || defined(__IAR_SYSTEMS_ICC__)
+#pragma location = ".code_in_qspi"
+void blink_led(void)
+#else
 __attribute__((section(".code_in_qspi"),long_call)) void blink_led(void)
+#endif
 {
     delay_ms(1000, __FUNCTION__);
 
@@ -608,11 +650,25 @@ __attribute__((section(".code_in_qspi"),long_call)) void blink_led(void)
   Function:
     void APP_Initialize ( void )
 
-  Remarks:
-    Initializes the application state machine and data structures.
- */
+  Summary:
+     Application initialization routine.
 
-void APP_Initialize ( void )
+  Description:
+    This function initializes the application.  It places the
+    application in its initial state and prepares it to run so that its
+    APP_Tasks function can be called.
+
+  Parameters:
+    None.
+
+  Returns:
+    None.
+
+  Remarks:
+    This routine must be called from the main function.
+*/
+
+static void APP_Initialize ( void )
 {
     /* Place the App state machine in its initial state. */
     appData.state = APP_STATE_INIT;
@@ -622,28 +678,55 @@ void APP_Initialize ( void )
     /* Get the Start address and end address of the QSPI Flash memory region
      * used from the Linker symbols.
      */
+#if defined(__ICCARM__) || defined(__IAR_SYSTEMS_ICC__)
+    qspi_start = (uint32_t)__section_begin(".code_in_qspi");
+    qspi_end = (uint32_t)__section_end(".code_in_qspi");
+#else
     qspi_start = (uint32_t)&_start_qspi;
     qspi_end = (uint32_t)&_end_qspi;
+#endif
 
     qspi_length = qspi_end - qspi_start;
 
     verify_qspiMemory = (uint8_t *)(qspi_start);
 
     /* Starting location of blink_led function loaded in Internal Flash*/
+#if defined(__ICCARM__) || defined(__IAR_SYSTEMS_ICC__)
+    qspi_loadMemAddr = (uint8_t *)__section_begin(".code_in_qspi_init");
+#else
     qspi_loadMemAddr = (uint8_t *) &_etext;
+#endif
 
     SYSTICK_TimerStart();
 }
+
 
 /******************************************************************************
   Function:
     void APP_Tasks ( void )
 
+  Summary:
+    Application tasks function
+
+  Description:
+    This routine is the Application's tasks function.  It
+    defines the application's state machine and core logic.
+
+  Precondition:
+    The system and application initialization ("SYS_Initialize") should be
+    called before calling this.
+
+  Parameters:
+    None.
+
+  Returns:
+    None.
+
   Remarks:
-    Executes the application state machine for QSPI XIP function operations.
+    This routine must be called from SYS_Tasks() routine.
  */
 
-void APP_Tasks ( void )
+static void APP_Tasks ( void )
 {
     uint32_t idx;
 
@@ -821,11 +904,16 @@ void APP_Tasks ( void )
 // *****************************************************************************
 // *****************************************************************************
 
+
+
+
+
+
 int main ( void )
 {
     /* Initialize all modules */
     SYS_Initialize ( NULL );
-
+    
     APP_Initialize();
 
     while ( true )
@@ -839,6 +927,9 @@ int main ( void )
 }
 
 
+
+
 /*******************************************************************************
  End of File
 */
+
